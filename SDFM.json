@@ -1,0 +1,9 @@
+{
+	"env": [
+		{
+			"SDFM": "PATH/TO/PACKAGE/SDFModeler"
+		}
+	],
+	"path": "$SDFM"
+	
+}
