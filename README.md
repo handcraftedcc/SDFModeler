@@ -1,7 +1,7 @@
 # SDFModeler
  A free, open source SDF Modeling Toolset for Houdini!
 
-You can find documentation and tutorials for the toolset [here]([https://pages.github.com/](https://www.notion.so/dominiklange/SDF-Modeler-d965edcc82b64262ab4e5aed102daa12?pvs=4))!
+You can find documentation and tutorials for the toolset [here](https://www.notion.so/dominiklange/SDF-Modeler-d965edcc82b64262ab4e5aed102daa12?pvs=4)!
 
 ## Installation
 1. Download and unpack zip file into folder of your choice.
