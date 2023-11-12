@@ -12,4 +12,4 @@ You can find documentation and tutorials for the toolset [here](https://www.noti
 	Linux: ~/houdini19.5
 	```
 3. Replace ```"PATH/TO/PACKAGE/"``` with path to the folder. In my case that will read: ```"C:/Users/Dominik/Documents/Houdini Assets/Project Packs/SDFModeler"```
-	Make sure to use "/" as seperators, not "\" otherwise it won't work.
+	Make sure to use ```"/"``` as seperators, not ```"\"``` otherwise it won't work.
