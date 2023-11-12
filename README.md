@@ -4,7 +4,6 @@
 You can find documentation and tutorials for the toolset [here](https://www.notion.so/dominiklange/SDF-Modeler-d965edcc82b64262ab4e5aed102daa12?pvs=4)!
 
 ## Installation
-Attention: This toolset uses some sidefx labs and mops nodes.
 1. Download and unpack zip file into folder of your choice.
 2. Copy SDFM.json to houdini package folder
 	```
