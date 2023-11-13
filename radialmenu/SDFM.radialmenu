@@ -1,0 +1,58 @@
+{
+	"fileversion":"19.5.569",
+	"name":"SDFM",
+	"categories":"Standard",
+	"pane":"network",
+	"label":"SDFM",
+	"type":"submenu",
+	"items":{
+		"0":{
+			"label":"SDFM Assembler",
+			"type":"script_action",
+			"icon":"opdef:/dom::Sop/SDFM_Assembler::1.18?IconSVG",
+			"script":"radialmenu.runShelfTool(kwargs, 'dom::sop_SDFM_Assembler::1.18')"
+		},
+		"1":{
+			"label":"SDFM Prim Mirror",
+			"type":"script_action",
+			"icon":"opdef:/dom::Sop/SDFM_PrimMirror::1.0?IconSVG",
+			"script":"radialmenu.runShelfTool(kwargs, 'dom::sop_SDFM_PrimMirror::1.0')"
+		},
+		"2":{
+			"label":"SDFM PrimArray",
+			"type":"script_action",
+			"icon":"opdef:/dom::Sop/SDFM_PrimArray::1.0?IconSVG",
+			"script":"radialmenu.runShelfTool(kwargs, 'dom::sop_SDFM_PrimArray::1.0')"
+		},
+		"3":{
+			"label":"SDFM Properties",
+			"type":"script_action",
+			"icon":"opdef:/dom::Sop/SDFM_Properties::1.0?IconSVG",
+			"script":"radialmenu.runShelfTool(kwargs, 'dom::sop_SDFM_Properties::1.0')"
+		},
+		"4":{
+			"label":"SDFM Volume 2 Mesh",
+			"type":"script_action",
+			"icon":"opdef:/dom::Sop/SDFMVolume2Mesh::1.0?IconSVG",
+			"script":"radialmenu.runShelfTool(kwargs, 'dom::sop_SDFMVolume2Mesh::1.0')"
+		},
+		"5":{
+			"label":"SDFM Volume Prim",
+			"type":"script_action",
+			"icon":"opdef:/dom::Sop/SDFM_VolumePrim::1.1?IconSVG",
+			"script":"radialmenu.runShelfTool(kwargs, 'dom::sop_SDFM_VolumePrim::1.1')"
+		},
+		"6":{
+			"label":"SDFM Mesh Prim",
+			"type":"script_action",
+			"icon":"opdef:/dom::Sop/SDFM_MeshPrim::1.0?IconSVG",
+			"script":"radialmenu.runShelfTool(kwargs, 'dom::sop_SDFM_MeshPrim::1.0')"
+		},
+		"7":{
+			"label":"SDFM Prim",
+			"type":"script_action",
+			"icon":"opdef:/dom::Sop/SDFM_Prim::1.3?IconSVG",
+			"script":"radialmenu.runShelfTool(kwargs, 'dom::sop_SDFM_Prim::1.3')"
+		}
+	}
+}
