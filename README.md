@@ -13,3 +13,7 @@ You can find documentation and tutorials for the toolset [here](https://www.noti
 	```
 3. Replace ```"PATH/TO/PACKAGE/"``` with path to the folder. In my case that will read: ```"C:/Users/Dominik/Documents/Houdini Assets/Project Packs/SDFModeler"```
 	Make sure to use ```"/"``` as seperators, not ```"\"``` otherwise it won't work.
+
+## Credit
+A good bit of the base code for the SDF operations were taken from https://mercury.sexy/hg_sdf/
+Thanks to the mercury team for releasing the code under the MIT license!
