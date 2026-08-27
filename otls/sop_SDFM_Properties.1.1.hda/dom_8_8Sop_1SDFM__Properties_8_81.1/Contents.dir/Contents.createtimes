@@ -1,0 +1,23 @@
+{
+	"hdaroot/CreateAttribs_GroupMarker.def":1785861433,
+	"hdaroot/switch2.def":1685745154,
+	"hdaroot/switch4.def":1686320898,
+	"hdaroot/switch6.def":1785865589,
+	"hdaroot/CreateAttribs_Combine.def":1685539350,
+	"hdaroot/CreateAttribs_Offset.def":1685539350,
+	"hdaroot/output0.def":1685652445,
+	"hdaroot/Union.def":1685745161,
+	"hdaroot/Difference.def":1685745161,
+	"hdaroot/switch1.def":1685728104,
+	"hdaroot/CreateAttribs_OLD.def":1685539350,
+	"hdaroot/Other.def":1685745161,
+	"hdaroot/switch3.def":1685745239,
+	"hdaroot/switch5.def":1686320898,
+	"hdaroot/transform1.def":1685715942,
+	"hdaroot/Intersect.def":1685745161,
+	"hdaroot/switch7.def":1785883293,
+	"hdaroot/CreateAttribs_Shell.def":1685539350,
+	"hdaroot/CreateAttribs_Combine1.def":1685539350,
+	"hdaroot/CreateAttribs_Modifiers.def":1785883296,
+	"hdaroot.def":1699973304
+}

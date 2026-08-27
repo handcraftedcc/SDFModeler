@@ -1,0 +1,92 @@
+# Dialog script for dom::SDFM_PrimMirror::1.0 automatically generated
+
+{
+    name	dom::SDFM_PrimMirror::1.0
+    script	dom::SDFM_PrimMirror::1.0
+    label	"SDFM Prim Mirror"
+
+    help {
+	""
+    }
+    bindhandle group bboxvector "Mirror_Direction" input "ownerop('mirror1') owneropgroup('group')"
+    bindhandle originx bboxvector "Mirror_Direction" tx "ownerop('mirror1') owneropgroup('group')"
+    bindhandle originy bboxvector "Mirror_Direction" ty "ownerop('mirror1') owneropgroup('group')"
+    bindhandle originz bboxvector "Mirror_Direction" tz "ownerop('mirror1') owneropgroup('group')"
+    bindhandle dirx bboxvector "Mirror_Direction" vx "ownerop('mirror1') owneropgroup('group')"
+    bindhandle diry bboxvector "Mirror_Direction" vy "ownerop('mirror1') owneropgroup('group')"
+    bindhandle dirz bboxvector "Mirror_Direction" vz "ownerop('mirror1') owneropgroup('group')"
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    parm {
+        name    "group"
+        label   "Group"
+        type    string
+        default { "" }
+        menutoggle {
+            [ "opmenu -l -a mirror1 group" ]
+        }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_action" "import soputils\nkwargs['geometrytype'] = (hou.geometryType.Primitives,)\nkwargs['inputindex'] = 0\nsoputils.selectGroupParm(kwargs)" }
+        parmtag { "script_action_help" "Select geometry from an available viewport.\nShift-click to turn on Select Groups." }
+        parmtag { "script_action_icon" "BUTTONS_reselect" }
+    }
+    parm {
+        name    "origin"
+        label   "Origin"
+        type    vector
+        size    3
+        default { "0" "0" "0" }
+        range   { -1 1 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "dist"
+        label   "Distance"
+        type    float
+        default { "0" }
+        range   { -5 5 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "dir"
+        label   "Direction"
+        type    direction
+        size    3
+        default { "1" "0" "0" }
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "createoutputgroup"
+        label   "Create Output Group"
+        type    toggle
+        nolabel
+        joinnext
+        default { "off" }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "outputgroup"
+        label   "Output Group"
+        type    string
+        default { "mirror" }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "keepOriginal"
+        label   "Keep Original"
+        type    toggle
+        default { "on" }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+}

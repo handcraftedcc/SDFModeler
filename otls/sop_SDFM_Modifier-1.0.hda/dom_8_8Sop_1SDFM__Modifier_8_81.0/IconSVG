@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="linear-gradient" x1="4.64" y1="24.86" x2="43.79" y2="24.86" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#ccc"/>
+    </linearGradient>
+  </defs>
+  <path d="M39.55,36.01l-28.07,6.75c-3.89.94-7.46-2.44-6.75-6.37l4.55-25.05c.53-2.91,3.24-4.89,6.17-4.5l10.35,1.36c7.18.95,13.15,5.98,15.29,12.89l2.45,7.88c.95,3.06-.88,6.28-3.99,7.03Z" style="fill: url(#linear-gradient); stroke: #333; stroke-miterlimit: 10; stroke-width: 1.69px;"/>
+  <g>
+    <path d="M13.42,37.66l-2.76-2.76,12.41-12.41,2.76,2.76-12.41,12.41Z" style="fill: #d3d57c; stroke: #333; stroke-linejoin: round; stroke-width: 1.6px;"/>
+    <g>
+      <polygon points="16.42 18.08 12.97 16.81 16.42 15.53 17.7 12.08 18.97 15.53 22.42 16.81 18.97 18.08 17.7 21.53 16.42 18.08" style="fill: #d3d57c;"/>
+      <path d="M17.7,14.39l.65,1.76,1.76.65-1.76.65-.65,1.76-.65-1.76-1.76-.65,1.76-.65.65-1.76M17.7,9.77l-1.5,4.07-.4,1.07-1.07.4-4.07,1.5,4.07,1.5,1.07.4.4,1.07,1.5,4.07,1.5-4.07.4-1.07,1.07-.4,4.07-1.5-4.07-1.5-1.07-.4-.4-1.07-1.5-4.07h0Z" style="fill: #333;"/>
+    </g>
+    <g>
+      <polygon points="32.37 29.79 29.3 28.66 32.37 27.52 33.51 24.45 34.64 27.52 37.72 28.66 34.64 29.79 33.51 32.87 32.37 29.79" style="fill: #d3d57c;"/>
+      <path d="M33.51,26.76l.51,1.38,1.38.51-1.38.51-.51,1.38-.51-1.38-1.38-.51,1.38-.51.51-1.38M33.51,22.14l-1.5,4.07-.26.69-.69.26-4.07,1.5,4.07,1.5.69.26.26.69,1.5,4.07,1.5-4.07.26-.69.69-.26,4.07-1.5-4.07-1.5-.69-.26-.26-.69-1.5-4.07h0Z" style="fill: #333;"/>
+    </g>
+    <rect x="26.91" y="17.26" width="4.39" height="3.9" transform="translate(-5.06 26.21) rotate(-45)" style="fill: #d3d57c; stroke: #333; stroke-linejoin: round; stroke-width: 1.6px;"/>
+  </g>
+</svg>

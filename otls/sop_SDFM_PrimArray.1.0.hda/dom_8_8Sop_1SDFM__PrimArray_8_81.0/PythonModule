@@ -1,0 +1,25 @@
+import hou
+
+def SetPivotToCentroid(self):
+    centroid = []
+    centroid.append(self.parm("centroidx").eval())
+    centroid.append(self.parm("centroidy").eval())
+    centroid.append(self.parm("centroidz").eval())
+    
+    self.parm("px").set(centroid[0])
+    self.parm("py").set(centroid[1])
+    self.parm("pz").set(centroid[2])
+    
+def ResetTransforms(self):
+    self.parm("xOrd").set(0)     
+    self.parm("rOrd").set(0)     
+    self.parm("tx").set(0)
+    self.parm("ty").set(0)
+    self.parm("tz").set(0)
+    self.parm("rx").set(0)
+    self.parm("ry").set(0)
+    self.parm("rz").set(0)    
+    self.parm("sx").set(1)
+    self.parm("sy").set(1)
+    self.parm("sz").set(1)   
+    self.parm("scale").set(1)      

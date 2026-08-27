@@ -1,0 +1,1217 @@
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY"
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename=".OPfallbacks"
+Content-Type: application/external-reference
+
+.OPfallbacks
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename=".OPdummydefs"
+Content-Type: application/external-reference
+
+.OPdummydefs
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="node_type"
+Content-Type: text/plain
+
+Sop
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.init"
+Content-Type: text/plain
+
+type = dom::SDFM_Group::1.0
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -1.78841 1.49516
+connectornextid 4
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	SDFM_Prim5 0 1 "input1"
+2 	SDFM_Prim6 0 1 "input2"
+3 	SDFM_Prim7 0 1 "input3"
+}
+inputs
+{
+0 	SDFM_Prim5 0 1
+1 	SDFM_Prim6 0 1
+2 	SDFM_Prim7 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author Dom@DomWorkstation
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__netbox1.netboxinit"
+Content-Type: text/plain
+
+2
+2
+{
+	autofit := 0;
+	color := "UT_Color RGB 0.52 0.52 0.52 ";
+	comment := Inputs;
+	height := 0.7666000142693505;
+	minimized := 1;
+	width := 220.39999746680297;
+	x_position := 0.4112570437456979;
+	y_position := 6.596000231920707;
+}
+{
+  create -1
+  modify -1
+  author Dom@DomWorkstation
+  access 0777
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.inp"
+Content-Type: text/plain
+
+100
+0 0.71125704225558217 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+1 2.9112570169236078 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+2 5.1112569915916337 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+3 7.3112569662596592 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+4 9.5112569409276873 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+5 11.711256915595712 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+6 13.911256890263736 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+7 16.111256864931764 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+8 18.311256839599789 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+9 20.511256814267814 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+10 22.711256788935838 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+11 24.911256763603863 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+12 27.111256738271887 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+13 29.311256712939912 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+14 31.511256687607936 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+15 33.711256662275964 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+16 35.911256636943989 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+17 38.111256611612014 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+18 40.311256586280038 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+19 42.511256560948063 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+20 44.711256535616087 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+21 46.911256510284112 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+22 49.111256484952136 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+23 51.311256459620161 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+24 53.511256434288185 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+25 55.71125640895621 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+26 57.911256383624234 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+27 60.111256358292259 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+28 62.311256332960284 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+29 64.511256307628301 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+30 66.711256282296333 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+31 68.911256256964364 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+32 71.111256231632396 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+33 73.311256206300428 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+34 75.511256180968459 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+35 77.711256155636491 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+36 79.911256130304523 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+37 82.111256104972554 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+38 84.311256079640586 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+39 86.511256054308618 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+40 88.711256028976649 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+41 90.911256003644681 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+42 93.111255978312713 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+43 95.311255952980744 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+44 97.511255927648776 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+45 99.711255902316807 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+46 101.91125587698484 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+47 104.11125585165287 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+48 106.3112558263209 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+49 108.51125580098893 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+50 110.71125577565697 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+51 112.911255750325 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+52 115.11125572499303 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+53 117.31125569966106 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+54 119.51125567432909 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+55 121.71125564899712 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+56 123.91125562366516 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+57 126.11125559833319 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+58 128.3112555730012 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+59 130.51125554766924 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+60 132.71125552233727 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+61 134.9112554970053 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+62 137.11125547167333 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+63 139.31125544634136 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+64 141.51125542100939 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+65 143.71125539567743 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+66 145.91125537034546 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+67 148.11125534501349 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+68 150.31125531968152 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+69 152.51125529434955 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+70 154.71125526901758 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+71 156.91125524368562 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+72 159.11125521835365 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+73 161.31125519302168 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+74 163.51125516768971 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+75 165.71125514235774 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+76 167.91125511702577 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+77 170.11125509169381 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+78 172.31125506636184 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+79 174.51125504102987 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+80 176.7112550156979 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+81 178.91125499036593 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+82 181.11125496503396 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+83 183.311254939702 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+84 185.51125491437003 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+85 187.71125488903806 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+86 189.91125486370609 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+87 192.11125483837412 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+88 194.31125481304215 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+89 196.51125478771019 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+90 198.71125476237822 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+91 200.91125473704625 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+92 203.11125471171428 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+93 205.31125468638231 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+94 207.51125466105034 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+95 209.71125463571838 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+96 211.91125461038641 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+97 214.11125458505444 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+98 216.31125455972247 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+99 218.5112545343905 6.862600234269129 2 0 __netbox1 "FROMOUTPUT"
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output0.init"
+Content-Type: text/plain
+
+type = output
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output0.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 1.35249 0.95804
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	merge1 6 1 "input1"
+}
+inputs
+{
+0 	merge1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author Dom@DomWorkstation
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output0.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+outputidx	[ 0	locks=0 ]	(	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output0.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/SDFM_Properties1.init"
+Content-Type: text/plain
+
+type = dom::SDFM_Properties::1.1
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/SDFM_Properties1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 5.21521 2.87297
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	pack1 1 1 "input1"
+}
+inputs
+{
+0 	pack1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author Dom@DomWorkstation
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/SDFM_Properties1.chn"
+Content-Type: text/plain
+
+{
+    channel shelltoggle {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../shelltoggle\") }
+    }
+    channel shellthickness {
+      lefttype = extend
+      righttype = extend
+      default = 0.050000000000000003
+      flags = 0
+      segment { length = 0 value = 0.050000000000000003 0.050000000000000003 expr = ch(\"../shellthickness\") }
+    }
+    channel colorbymode {
+      lefttype = extend
+      righttype = extend
+      default = 1
+      flags = 0
+      segment { length = 0 value = 1 1 expr = ch(\"../colorbymode\") }
+    }
+    channel combinemode {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../combinemode\") }
+    }
+    channel typeuni {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../typeuni\") }
+    }
+    channel typeinters {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../typeinters\") }
+    }
+    channel typediff {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../typediff\") }
+    }
+    channel typeoth {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../typeoth\") }
+    }
+    channel radius {
+      lefttype = extend
+      righttype = extend
+      default = 0.033000000000000002
+      flags = 0
+      segment { length = 0 value = 0.033000000000000002 0.033000000000000002 expr = ch(\"../radius\") }
+    }
+    channel offset {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../offset\") }
+    }
+    channel radiusa {
+      lefttype = extend
+      righttype = extend
+      default = 0.050000000000000003
+      flags = 0
+      segment { length = 0 value = 0.050000000000000003 0.050000000000000003 expr = ch(\"../radiusa\") }
+    }
+    channel radiusb {
+      lefttype = extend
+      righttype = extend
+      default = 0.050000000000000003
+      flags = 0
+      segment { length = 0 value = 0.050000000000000003 0.050000000000000003 expr = ch(\"../radiusb\") }
+    }
+    channel count {
+      lefttype = extend
+      righttype = extend
+      default = 1
+      flags = 0
+      segment { length = 0 value = 1 1 expr = ch(\"../count\") }
+    }
+  }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/SDFM_Properties1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+folder2	[ 0	locks=0 ]	(	0	)
+t	[ 0	locks=0 ]	(	0	0	0	)
+r	[ 0	locks=0 ]	(	0	0	0	)
+s	[ 0	locks=0 ]	(	1	1	1	)
+scale	[ 0	locks=0 ]	(	1	)
+sepparm3	[ 0	locks=0 ]	(	)
+shellsettings	[ 0	locks=0 ]	(	"on"	)
+folder1	[ 0	locks=0 ]	(	0	)
+shelltoggle	[ 0	locks=0 ]	(	[ shelltoggle	0 ] 	)
+shellthickness	[ 0	locks=0 ]	(	[ shellthickness	0.05 ] 	)
+sepparm2	[ 0	locks=0 ]	(	)
+offsetsettings	[ 0	locks=0 ]	(	"on"	)
+folder3	[ 0	locks=0 ]	(	0	)
+offsettoggle	[ 0	locks=0 ]	(	"off"	)
+offsetamt	[ 0	locks=0 ]	(	0	)
+sepparm	[ 0	locks=0 ]	(	)
+CombineSettings	[ 0	locks=0 ]	(	"on"	)
+folder0	[ 0	locks=0 ]	(	0	)
+colorbymode	[ 0	locks=0 ]	(	[ colorbymode	1 ] 	)
+combinemode	[ 0	locks=0 ]	(	[ combinemode	0 ] 	)
+typeuni	[ 0	locks=0 ]	(	[ typeuni	0 ] 	)
+typeinters	[ 0	locks=0 ]	(	[ typeinters	0 ] 	)
+typediff	[ 0	locks=0 ]	(	[ typediff	0 ] 	)
+typeoth	[ 0	locks=0 ]	(	[ typeoth	0 ] 	)
+radius	[ 0	locks=0 ]	(	[ radius	0.033 ] 	)
+offset	[ 0	locks=0 ]	(	[ offset	0 ] 	)
+radiusa	[ 0	locks=0 ]	(	[ radiusa	0.05 ] 	)
+radiusb	[ 0	locks=0 ]	(	[ radiusb	0.05 ] 	)
+count	[ 0	locks=0 ]	(	[ count	1 ] 	)
+sepparm4	[ 0	locks=0 ]	(	)
+GroupSettings	[ 0	locks=0 ]	(	"on"	)
+folderGroup	[ 0	locks=0 ]	(	0	)
+groupMarker	[ 0	locks=0 ]	(	"2"	)
+sepparm5	[ 0	locks=0 ]	(	)
+ModifierSettings	[ 0	locks=0 ]	(	"off"	)
+groupModifier	[ 0	locks=0 ]	(	0	)
+modifierid	[ 0	locks=0 ]	(	"0"	)
+modifierMirror	[ 0	locks=0 ]	(	0	)
+modifierclip	[ 0	locks=0 ]	(	"off"	)
+mirrorside	[ 0	locks=0 ]	(	"0"	)
+ModiferRadial	[ 0	locks=0 ]	(	0	)
+radialcount	[ 0	locks=0 ]	(	6	)
+modifiermirror	[ 0	locks=0 ]	(	"off"	)
+modifierArray	[ 0	locks=0 ]	(	0	)
+enableaxisx	[ 0	locks=0 ]	(	"off"	)
+offsetx	[ 0	locks=0 ]	(	0	)
+countx	[ 0	locks=0 ]	(	0	)
+enableaxisy	[ 0	locks=0 ]	(	"off"	)
+offsety	[ 0	locks=0 ]	(	0	)
+county	[ 0	locks=0 ]	(	0	)
+enableaxisz	[ 0	locks=0 ]	(	"off"	)
+offsetz	[ 0	locks=0 ]	(	0	)
+countz	[ 0	locks=0 ]	(	0	)
+ModifierBend	[ 0	locks=0 ]	(	0	)
+bendamount	[ 0	locks=0 ]	(	0	)
+ModifierTwist	[ 0	locks=0 ]	(	0	)
+twistamount	[ 0	locks=0 ]	(	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/SDFM_Properties1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge1.init"
+Content-Type: text/plain
+
+type = merge
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 1.35134 2.32302
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+6 "output1"
+}
+inputsNamed3
+{
+4 	SDFM_Properties2 1 1 "input1"
+0 	merge2 100 1 "input2"
+5 	SDFM_Properties1 1 1 "input3"
+}
+inputs
+{
+0 	SDFM_Properties2 0 1
+1 	merge2 0 1
+2 	SDFM_Properties1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author Dom@DomWorkstation
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/groupstart.init"
+Content-Type: text/plain
+
+type = add
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/groupstart.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -2.57853 5.53272
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create -1
+  modify -1
+  author Dom@DomWorkstation
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/groupstart.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+stdswitcher	[ 0	locks=0 ]	(	0	0	0	)
+keep	[ 0	locks=0 ]	(	"off"	)
+points	[ 0	locks=0 ]	(	1	)
+remove	[ 0	locks=0 ]	(	"off"	)
+switcher	[ 0	locks=0 ]	(	0	0	)
+prims	[ 0	locks=0 ]	(	1	)
+group	[ 0	locks=0 ]	(	""	)
+add	[ 0	locks=0 ]	(	"all"	)
+inc	[ 0	locks=0 ]	(	2	)
+attrname	[ 0	locks=0 ]	(	""	)
+closedall	[ 0	locks=0 ]	(	"off"	)
+addparticlesystem	[ 0	locks=0 ]	(	"off"	)
+particlegroup	[ 0	locks=0 ]	(	""	)
+appendunusedtoparticlesystem	[ 0	locks=0 ]	(	"off"	)
+prim0	[ 0	locks=0 ]	(	""	)
+closed0	[ 0	locks=0 ]	(	"off"	)
+usept0	[ 0	locks=0 ]	(	"on"	)
+pt0	[ 0	locks=0 ]	(	0	0	0	)
+weight0	[ 0	locks=0 ]	(	1	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/groupstart.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/groupend.init"
+Content-Type: text/plain
+
+type = add
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/groupend.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 4.9979 4.93917
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create -1
+  modify -1
+  author Dom@DomWorkstation
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/groupend.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+stdswitcher	[ 0	locks=0 ]	(	0	0	0	)
+keep	[ 0	locks=0 ]	(	"off"	)
+points	[ 0	locks=0 ]	(	1	)
+remove	[ 0	locks=0 ]	(	"off"	)
+switcher	[ 0	locks=0 ]	(	0	0	)
+prims	[ 0	locks=0 ]	(	1	)
+group	[ 0	locks=0 ]	(	""	)
+add	[ 0	locks=0 ]	(	"all"	)
+inc	[ 0	locks=0 ]	(	2	)
+attrname	[ 0	locks=0 ]	(	""	)
+closedall	[ 0	locks=0 ]	(	"off"	)
+addparticlesystem	[ 0	locks=0 ]	(	"off"	)
+particlegroup	[ 0	locks=0 ]	(	""	)
+appendunusedtoparticlesystem	[ 0	locks=0 ]	(	"off"	)
+prim0	[ 0	locks=0 ]	(	""	)
+closed0	[ 0	locks=0 ]	(	"off"	)
+usept0	[ 0	locks=0 ]	(	"on"	)
+pt0	[ 0	locks=0 ]	(	0	0	0	)
+weight0	[ 0	locks=0 ]	(	1	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/groupend.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack1.init"
+Content-Type: text/plain
+
+type = pack
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 4.9979 3.90447
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	groupend 0 1 "input1"
+}
+inputs
+{
+0 	groupend 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author Dom@DomWorkstation
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+viewportlod	[ 0	locks=0 ]	(	"full"	)
+createpath	[ 0	locks=0 ]	(	"off"	)
+path	[ 0	locks=0 ]	(	op:`opfullpath('.')`	)
+packbyname	[ 0	locks=0 ]	(	"off"	)
+nameattribute	[ 0	locks=0 ]	(	name	)
+packedfragments	[ 0	locks=0 ]	(	"on"	)
+pivot	[ 0	locks=0 ]	(	"centroid"	)
+transfer_attributes	[ 0	locks=0 ]	(	""	)
+transfer_groups	[ 0	locks=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack2.init"
+Content-Type: text/plain
+
+type = pack
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -2.70073 4.65514
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	groupstart 0 1 "input1"
+}
+inputs
+{
+0 	groupstart 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author Dom@DomWorkstation
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+viewportlod	[ 0	locks=0 ]	(	"full"	)
+createpath	[ 0	locks=0 ]	(	"off"	)
+path	[ 0	locks=0 ]	(	op:`opfullpath('.')`	)
+packbyname	[ 0	locks=0 ]	(	"off"	)
+nameattribute	[ 0	locks=0 ]	(	name	)
+packedfragments	[ 0	locks=0 ]	(	"on"	)
+pivot	[ 0	locks=0 ]	(	"centroid"	)
+transfer_attributes	[ 0	locks=0 ]	(	""	)
+transfer_groups	[ 0	locks=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge2.init"
+Content-Type: text/plain
+
+type = merge
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 1.16011 5.42786
+connectornextid 101
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+100 "output1"
+}
+inputsNamed3
+{
+0 	(0) "" 1 "input1"
+1 	(1) "" 1 "input2"
+2 	(2) "" 1 "input3"
+3 	(3) "" 1 "input4"
+4 	(4) "" 1 "input5"
+5 	(5) "" 1 "input6"
+6 	(6) "" 1 "input7"
+7 	(7) "" 1 "input8"
+8 	(8) "" 1 "input9"
+9 	(9) "" 1 "input10"
+10 	(10) "" 1 "input11"
+11 	(11) "" 1 "input12"
+12 	(12) "" 1 "input13"
+13 	(13) "" 1 "input14"
+14 	(14) "" 1 "input15"
+15 	(15) "" 1 "input16"
+16 	(16) "" 1 "input17"
+17 	(17) "" 1 "input18"
+18 	(18) "" 1 "input19"
+19 	(19) "" 1 "input20"
+20 	(20) "" 1 "input21"
+21 	(21) "" 1 "input22"
+22 	(22) "" 1 "input23"
+23 	(23) "" 1 "input24"
+24 	(24) "" 1 "input25"
+25 	(25) "" 1 "input26"
+26 	(26) "" 1 "input27"
+27 	(27) "" 1 "input28"
+28 	(28) "" 1 "input29"
+29 	(29) "" 1 "input30"
+30 	(30) "" 1 "input31"
+31 	(31) "" 1 "input32"
+32 	(32) "" 1 "input33"
+33 	(33) "" 1 "input34"
+34 	(34) "" 1 "input35"
+35 	(35) "" 1 "input36"
+36 	(36) "" 1 "input37"
+37 	(37) "" 1 "input38"
+38 	(38) "" 1 "input39"
+39 	(39) "" 1 "input40"
+40 	(40) "" 1 "input41"
+41 	(41) "" 1 "input42"
+42 	(42) "" 1 "input43"
+43 	(43) "" 1 "input44"
+44 	(44) "" 1 "input45"
+45 	(45) "" 1 "input46"
+46 	(46) "" 1 "input47"
+47 	(47) "" 1 "input48"
+48 	(48) "" 1 "input49"
+49 	(49) "" 1 "input50"
+50 	(50) "" 1 "input51"
+51 	(51) "" 1 "input52"
+52 	(52) "" 1 "input53"
+53 	(53) "" 1 "input54"
+54 	(54) "" 1 "input55"
+55 	(55) "" 1 "input56"
+56 	(56) "" 1 "input57"
+57 	(57) "" 1 "input58"
+58 	(58) "" 1 "input59"
+59 	(59) "" 1 "input60"
+60 	(60) "" 1 "input61"
+61 	(61) "" 1 "input62"
+62 	(62) "" 1 "input63"
+63 	(63) "" 1 "input64"
+64 	(64) "" 1 "input65"
+65 	(65) "" 1 "input66"
+66 	(66) "" 1 "input67"
+67 	(67) "" 1 "input68"
+68 	(68) "" 1 "input69"
+69 	(69) "" 1 "input70"
+70 	(70) "" 1 "input71"
+71 	(71) "" 1 "input72"
+72 	(72) "" 1 "input73"
+73 	(73) "" 1 "input74"
+74 	(74) "" 1 "input75"
+75 	(75) "" 1 "input76"
+76 	(76) "" 1 "input77"
+77 	(77) "" 1 "input78"
+78 	(78) "" 1 "input79"
+79 	(79) "" 1 "input80"
+80 	(80) "" 1 "input81"
+81 	(81) "" 1 "input82"
+82 	(82) "" 1 "input83"
+83 	(83) "" 1 "input84"
+84 	(84) "" 1 "input85"
+85 	(85) "" 1 "input86"
+86 	(86) "" 1 "input87"
+87 	(87) "" 1 "input88"
+88 	(88) "" 1 "input89"
+89 	(89) "" 1 "input90"
+90 	(90) "" 1 "input91"
+91 	(91) "" 1 "input92"
+92 	(92) "" 1 "input93"
+93 	(93) "" 1 "input94"
+94 	(94) "" 1 "input95"
+95 	(95) "" 1 "input96"
+96 	(96) "" 1 "input97"
+97 	(97) "" 1 "input98"
+98 	(98) "" 1 "input99"
+99 	(99) "" 1 "input100"
+}
+inputs
+{
+0 	(0) 0 1
+1 	(1) 0 1
+2 	(2) 0 1
+3 	(3) 0 1
+4 	(4) 0 1
+5 	(5) 0 1
+6 	(6) 0 1
+7 	(7) 0 1
+8 	(8) 0 1
+9 	(9) 0 1
+10 	(10) 0 1
+11 	(11) 0 1
+12 	(12) 0 1
+13 	(13) 0 1
+14 	(14) 0 1
+15 	(15) 0 1
+16 	(16) 0 1
+17 	(17) 0 1
+18 	(18) 0 1
+19 	(19) 0 1
+20 	(20) 0 1
+21 	(21) 0 1
+22 	(22) 0 1
+23 	(23) 0 1
+24 	(24) 0 1
+25 	(25) 0 1
+26 	(26) 0 1
+27 	(27) 0 1
+28 	(28) 0 1
+29 	(29) 0 1
+30 	(30) 0 1
+31 	(31) 0 1
+32 	(32) 0 1
+33 	(33) 0 1
+34 	(34) 0 1
+35 	(35) 0 1
+36 	(36) 0 1
+37 	(37) 0 1
+38 	(38) 0 1
+39 	(39) 0 1
+40 	(40) 0 1
+41 	(41) 0 1
+42 	(42) 0 1
+43 	(43) 0 1
+44 	(44) 0 1
+45 	(45) 0 1
+46 	(46) 0 1
+47 	(47) 0 1
+48 	(48) 0 1
+49 	(49) 0 1
+50 	(50) 0 1
+51 	(51) 0 1
+52 	(52) 0 1
+53 	(53) 0 1
+54 	(54) 0 1
+55 	(55) 0 1
+56 	(56) 0 1
+57 	(57) 0 1
+58 	(58) 0 1
+59 	(59) 0 1
+60 	(60) 0 1
+61 	(61) 0 1
+62 	(62) 0 1
+63 	(63) 0 1
+64 	(64) 0 1
+65 	(65) 0 1
+66 	(66) 0 1
+67 	(67) 0 1
+68 	(68) 0 1
+69 	(69) 0 1
+70 	(70) 0 1
+71 	(71) 0 1
+72 	(72) 0 1
+73 	(73) 0 1
+74 	(74) 0 1
+75 	(75) 0 1
+76 	(76) 0 1
+77 	(77) 0 1
+78 	(78) 0 1
+79 	(79) 0 1
+80 	(80) 0 1
+81 	(81) 0 1
+82 	(82) 0 1
+83 	(83) 0 1
+84 	(84) 0 1
+85 	(85) 0 1
+86 	(86) 0 1
+87 	(87) 0 1
+88 	(88) 0 1
+89 	(89) 0 1
+90 	(90) 0 1
+91 	(91) 0 1
+92 	(92) 0 1
+93 	(93) 0 1
+94 	(94) 0 1
+95 	(95) 0 1
+96 	(96) 0 1
+97 	(97) 0 1
+98 	(98) 0 1
+99 	(99) 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author Dom@DomWorkstation
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/SDFM_Properties2.init"
+Content-Type: text/plain
+
+type = dom::SDFM_Properties::1.1
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/SDFM_Properties2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -2.57853 3.54165
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	pack2 1 1 "input1"
+}
+inputs
+{
+0 	pack2 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author Dom@DomWorkstation
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/SDFM_Properties2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+folder2	[ 0	locks=0 ]	(	0	)
+t	[ 0	locks=0 ]	(	0	0	0	)
+r	[ 0	locks=0 ]	(	0	0	0	)
+s	[ 0	locks=0 ]	(	1	1	1	)
+scale	[ 0	locks=0 ]	(	1	)
+sepparm3	[ 0	locks=0 ]	(	)
+shellsettings	[ 0	locks=0 ]	(	"off"	)
+folder1	[ 0	locks=0 ]	(	0	)
+shelltoggle	[ 0	locks=0 ]	(	"off"	)
+shellthickness	[ 0	locks=0 ]	(	0.05	)
+sepparm2	[ 0	locks=0 ]	(	)
+offsetsettings	[ 0	locks=0 ]	(	"off"	)
+folder3	[ 0	locks=0 ]	(	0	)
+offsettoggle	[ 0	locks=0 ]	(	"off"	)
+offsetamt	[ 0	locks=0 ]	(	0	)
+sepparm	[ 0	locks=0 ]	(	)
+CombineSettings	[ 0	locks=0 ]	(	"off"	)
+folder0	[ 0	locks=0 ]	(	0	)
+colorbymode	[ 0	locks=0 ]	(	"on"	)
+combinemode	[ 0	locks=0 ]	(	"0"	)
+typeuni	[ 0	locks=0 ]	(	"0"	)
+typeinters	[ 0	locks=0 ]	(	"0"	)
+typediff	[ 0	locks=0 ]	(	"3"	)
+typeoth	[ 0	locks=0 ]	(	"0"	)
+radius	[ 0	locks=0 ]	(	0.053	)
+offset	[ 0	locks=0 ]	(	0	)
+radiusa	[ 0	locks=0 ]	(	0.05	)
+radiusb	[ 0	locks=0 ]	(	0.05	)
+count	[ 0	locks=0 ]	(	2	)
+sepparm4	[ 0	locks=0 ]	(	)
+GroupSettings	[ 0	locks=0 ]	(	"on"	)
+folderGroup	[ 0	locks=0 ]	(	0	)
+groupMarker	[ 0	locks=0 ]	(	"1"	)
+sepparm5	[ 0	locks=0 ]	(	)
+ModifierSettings	[ 0	locks=0 ]	(	"off"	)
+groupModifier	[ 0	locks=0 ]	(	0	)
+modifierid	[ 0	locks=0 ]	(	"0"	)
+modifierMirror	[ 0	locks=0 ]	(	0	)
+modifierclip	[ 0	locks=0 ]	(	"off"	)
+mirrorside	[ 0	locks=0 ]	(	"0"	)
+ModiferRadial	[ 0	locks=0 ]	(	0	)
+radialcount	[ 0	locks=0 ]	(	6	)
+modifiermirror	[ 0	locks=0 ]	(	"off"	)
+modifierArray	[ 0	locks=0 ]	(	0	)
+enableaxisx	[ 0	locks=0 ]	(	"off"	)
+offsetx	[ 0	locks=0 ]	(	0	)
+countx	[ 0	locks=0 ]	(	0	)
+enableaxisy	[ 0	locks=0 ]	(	"off"	)
+offsety	[ 0	locks=0 ]	(	0	)
+county	[ 0	locks=0 ]	(	0	)
+enableaxisz	[ 0	locks=0 ]	(	"off"	)
+offsetz	[ 0	locks=0 ]	(	0	)
+countz	[ 0	locks=0 ]	(	0	)
+ModifierBend	[ 0	locks=0 ]	(	0	)
+bendamount	[ 0	locks=0 ]	(	0	)
+ModifierTwist	[ 0	locks=0 ]	(	0	)
+twistamount	[ 0	locks=0 ]	(	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/SDFM_Properties2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.order"
+Content-Type: text/plain
+
+9
+output0
+SDFM_Properties1
+merge1
+groupstart
+groupend
+pack1
+pack2
+merge2
+SDFM_Properties2
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.net"
+Content-Type: text/plain
+
+1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY--

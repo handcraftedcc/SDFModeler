@@ -1,0 +1,14 @@
+Operator:     Dom::SDFMPostFixEdges::1.1
+Label:        SDFM Post Fix Edges
+Path:         oplib:/Dom::Sop/SDFMPostFixEdges::1.1?Dom::Sop/SDFMPostFixEdges::1.1
+Icon:         opdef:/Dom::Sop/SDFMPostFixEdges::1.1?IconSVG
+Table:        Sop
+License:      
+Extra:        guide=GUIDE inputcolors='1 "RGB 0.66972 0.66972 0.66972" ' outputcolors='1 "RGB 0.66972 0.66972 0.66972" ' 
+User:         
+Inputs:       1 to 1
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Mon Jan  8 09:57:25 2024
+

@@ -1,0 +1,14 @@
+Operator:     dom::SDFM_VolumePrim::1.2
+Label:        SDFM Volume Prim (Legacy)
+Path:         oplib:/dom::Sop/SDFM_VolumePrim::1.2?dom::Sop/SDFM_VolumePrim::1.2
+Icon:         opdef:/dom::Sop/SDFM_VolumePrim::1.2?IconSVG
+Table:        Sop
+License:      
+Extra:        inputcolors='2 "RGB 0.72549 0.72549 0.72549" "RGB 0.72549 0.72549 0.72549" ' outputcolors='1 "RGB 0.72549 0.72549 0.72549" ' 
+User:         
+Inputs:       1 to 2
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Tue Aug  4 17:15:56 2026
+

@@ -1,0 +1,14 @@
+Operator:     dom::SDFMVolume2Mesh::1.0
+Label:        SDFM Volume 2 Mesh
+Path:         oplib:/dom::Sop/SDFMVolume2Mesh::1.0?dom::Sop/SDFMVolume2Mesh::1.0
+Icon:         opdef:/dom::Sop/SDFMVolume2Mesh::1.0?IconSVG
+Table:        Sop
+License:      
+Extra:        inputcolors='1 "RGB 0.677404 0.677404 0.677404" ' outputcolors='1 "RGB 0.677404 0.677404 0.677404" ' 
+User:         
+Inputs:       0 to 1
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Mon Jan  8 09:57:27 2024
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="New_Gradient_Swatch_copy" data-name="New Gradient Swatch copy" x1="16.4" y1="3.11" x2="37.4" y2="41.11" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#ccc"/>
+    </linearGradient>
+  </defs>
+  <polygon points="45.14 9.04 32.72 4.27 24.15 7.56 15.61 4.28 3.19 9.05 3.19 25.29 11.8 28.6 11.8 38.96 24.22 43.73 36.63 38.96 36.63 28.54 45.14 25.28 45.14 9.04" style="fill: url(#New_Gradient_Swatch_copy); stroke: #333; stroke-linejoin: round; stroke-width: 1.6px;"/>
+  <path d="M15.49,11.57l-5.32,2.04c-.13.05-.21.17-.21.31v6.48c0,.14.09.26.21.31l5.32,2.04c.08.03.16.03.24,0l5.32-2.04c.13-.05.21-.17.21-.31v-6.48c0-.14-.09-.26-.21-.31l-5.32-2.04c-.08-.03-.16-.03-.24,0Z" style="fill: #d3d57c; stroke: #333; stroke-miterlimit: 10; stroke-width: 1.6px;"/>
+  <polygon points="9.96 13.7 9.96 20.64 15.61 22.81 15.61 15.87 9.96 13.7" style="fill: #d3d57c; stroke: #333; stroke-linejoin: round; stroke-width: 1.6px;"/>
+  <polygon points="21.26 13.7 21.26 20.64 15.61 22.81 15.61 15.87 21.26 13.7" style="fill: #d3d57c; stroke: #333; stroke-linejoin: round; stroke-width: 1.6px;"/>
+  <path d="M24.1,25.25l-5.32,2.04c-.13.05-.21.17-.21.31v6.48c0,.14.09.26.21.31l5.32,2.04c.08.03.16.03.24,0l5.32-2.04c.13-.05.21-.17.21-.31v-6.48c0-.14-.09-.26-.21-.31l-5.32-2.04c-.08-.03-.16-.03-.24,0Z" style="fill: #d3d57c; stroke: #333; stroke-miterlimit: 10; stroke-width: 1.6px;"/>
+  <polygon points="18.56 27.37 18.56 34.31 24.22 36.48 24.22 29.54 18.56 27.37" style="fill: #d3d57c; stroke: #333; stroke-linejoin: round; stroke-width: 1.6px;"/>
+  <polygon points="29.87 27.37 29.87 34.31 24.22 36.48 24.22 29.54 29.87 27.37" style="fill: #d3d57c; stroke: #333; stroke-linejoin: round; stroke-width: 1.6px;"/>
+  <path d="M32.6,11.56l-5.32,2.04c-.13.05-.21.17-.21.31v6.48c0,.14.09.26.21.31l5.32,2.04c.08.03.16.03.24,0l5.32-2.04c.13-.05.21-.17.21-.31v-6.48c0-.14-.09-.26-.21-.31l-5.32-2.04c-.08-.03-.16-.03-.24,0Z" style="fill: #d3d57c; stroke: #333; stroke-miterlimit: 10; stroke-width: 1.6px;"/>
+  <polygon points="27.07 13.69 27.07 20.63 32.72 22.8 32.72 15.86 27.07 13.69" style="fill: #d3d57c; stroke: #333; stroke-linejoin: round; stroke-width: 1.6px;"/>
+  <polygon points="38.37 13.69 38.37 20.63 32.72 22.8 32.72 15.86 38.37 13.69" style="fill: #d3d57c; stroke: #333; stroke-linejoin: round; stroke-width: 1.6px;"/>
+</svg>
