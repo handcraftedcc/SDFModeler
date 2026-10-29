@@ -1,0 +1,18 @@
+MOPS::Sop/Extract_Attributes::1.2 C:/Users/Dom/Documents/Houdini Assets/Plugins/MOPS/MOPS-henry_dev_2025-12-29/MOPS-henry_dev/otls/MOPS_extractAttributes.hda
+MOPS::Sop/Extract_Attributes::1.2 otls/MOPS_extractAttributes.hda
+Sop/attribwrangle C:/PROGRA~1/SIDEEF~1/HOUDIN~1.368/houdini/otls/OPlibSop.hda
+Sop/attribwrangle otls/OPlibSop.hda
+Sop/color C:/PROGRA~1/SIDEEF~1/HOUDIN~1.368/houdini/otls/OPlibSop.hda
+Sop/color otls/OPlibSop.hda
+dom::Sop/SDFM_Properties::1.0 C:/Users/Dom/Documents/GitHub/SDFModeler/otls/sop_SDFM_Properties.1.0.hda
+dom::Sop/SDFM_Properties::1.0 otls/sop_SDFM_Properties.1.0.hda
+dom::Sop/SDFM_Properties::1.1 C:/Users/Dom/Documents/GitHub/SDFModeler/otls/sop_SDFM_Properties.1.1.hda
+dom::Sop/SDFM_Properties::1.1 otls/sop_SDFM_Properties.1.1.hda
+dom::Sop/SDFM_VolumePrim::1.1 C:/Users/Dom/Documents/GitHub/SDFModeler/otls/sop_SDFM_VolumePrim.1.1.hda
+dom::Sop/SDFM_VolumePrim::1.1 otls/sop_SDFM_VolumePrim.1.1.hda
+labs::Sop/box_clip C:/Program Files/Side Effects Software/sidefx_packages/SideFXLabs22.0/otls/SideFX_Labs.hda
+labs::Sop/box_clip otls/SideFX_Labs.hda
+Sop/split C:/PROGRA~1/SIDEEF~1/HOUDIN~1.368/houdini/otls/OPlibSop.hda
+Sop/split otls/OPlibSop.hda
+Sop/volumewrangle C:/PROGRA~1/SIDEEF~1/HOUDIN~1.368/houdini/otls/OPlibSop.hda
+Sop/volumewrangle otls/OPlibSop.hda

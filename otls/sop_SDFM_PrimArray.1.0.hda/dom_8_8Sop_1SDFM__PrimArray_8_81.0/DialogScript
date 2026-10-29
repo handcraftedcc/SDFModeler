@@ -1,0 +1,227 @@
+# Dialog script for dom::SDFM_PrimArray::1.0 automatically generated
+
+{
+    name	dom::SDFM_PrimArray::1.0
+    script	dom::SDFM_Array::1.0
+    label	"SDFM Prim Array"
+
+    help {
+	""
+    }
+    bindhandle sourcegroup xform "Copy_Transformer" input "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle prx xform "Copy_Transformer" pivot_rx "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle pry xform "Copy_Transformer" pivot_ry "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle prz xform "Copy_Transformer" pivot_rz "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle px xform "Copy_Transformer" px "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle py xform "Copy_Transformer" py "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle pz xform "Copy_Transformer" pz "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle rx xform "Copy_Transformer" rx "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle ry xform "Copy_Transformer" ry "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle rz xform "Copy_Transformer" rz "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle sx xform "Copy_Transformer" sx "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle sy xform "Copy_Transformer" sy "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle sz xform "Copy_Transformer" sz "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle xOrd xform "Copy_Transformer" trs_order "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle tx xform "Copy_Transformer" tx "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle ty xform "Copy_Transformer" ty "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle tz xform "Copy_Transformer" tz "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle scale xform "Copy_Transformer" uniform_scale "ownerop('copy2') owneropgroup('sourcegroup')"
+    bindhandle rOrd xform "Copy_Transformer" xyz_order "ownerop('copy2') owneropgroup('sourcegroup')"
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    parm {
+        name    "sourcegroup"
+        label   "Source Group"
+        type    string
+        default { "" }
+        menutoggle {
+            [ "opmenu -l -a copy2 sourcegroup" ]
+        }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_action" "import soputils\nkwargs['geometrytype'] = hou.geometryType.Primitives\nkwargs['inputindex'] = 0\nsoputils.selectGroupParm(kwargs)" }
+        parmtag { "script_action_help" "Select geometry from an available viewport.\nShift-click to turn on Select Groups." }
+        parmtag { "script_action_icon" "BUTTONS_reselect" }
+        parmtag { "sop_input" "0" }
+    }
+    parm {
+        name    "mode"
+        label   "Mode"
+        type    ordinal
+        default { "0" }
+        menu {
+            "0" "Directional Total"
+            "1" "Directional Individual"
+            "2" "Radial Total"
+            "3" "Radial Individual"
+        }
+        export  all
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "ncy"
+        label   "Total Number"
+        type    integer
+        default { "2" }
+        range   { 1! 20 }
+        export  all
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "degreestot"
+        label   "Total Degrees"
+        type    float
+        default { "360" }
+        hidewhen "{ mode != 2 }"
+        range   { -360 360 }
+        export  all
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "degreesindi"
+        label   "Individual Degrees"
+        type    float
+        default { "45" }
+        hidewhen "{ mode != 3 }"
+        range   { -360 360 }
+        export  all
+        parmtag { "script_callback_language" "python" }
+    }
+    groupsimple {
+        name    "folder0"
+        label   "Transform"
+
+        parm {
+            name    "resettranforms"
+            label   "Reset Transforms"
+            type    button
+            default { "0" }
+            export  all
+            parmtag { "script_callback" "hou.pwd().hdaModule().ResetTransforms(hou.pwd())" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "xOrd"
+            label   "Transform Order"
+            type    ordinal
+            joinnext
+            default { "srt" }
+            menu {
+                "srt"   "Scale Rot Trans"
+                "str"   "Scale Trans Rot"
+                "rst"   "Rot Scale Trans"
+                "rts"   "Rot Trans Scale"
+                "tsr"   "Trans Scale Rot"
+                "trs"   "Trans Rot Scale"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "rOrd"
+            label   "Rotate Order"
+            type    ordinal
+            nolabel
+            default { "xyz" }
+            menu {
+                "xyz"   "Rx Ry Rz"
+                "xzy"   "Rx Rz Ry"
+                "yxz"   "Ry Rx Rz"
+                "yzx"   "Ry Rz Rx"
+                "zxy"   "Rz Rx Ry"
+                "zyx"   "Rz Ry Rx"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "t"
+            label   "Translate"
+            type    vector
+            size    3
+            default { "0" "0" "0" }
+            range   { -1 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "r"
+            label   "Rotate"
+            type    vector
+            size    3
+            default { "0" "0" "0" }
+            range   { 0 360 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "s"
+            label   "Scale"
+            type    vector
+            size    3
+            default { "1" "1" "1" }
+            range   { -1 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "scale"
+            label   "Uniform Scale"
+            type    float
+            default { "1" }
+            range   { 0 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+    groupsimple {
+        name    "folder1"
+        label   "Pivot"
+
+        parm {
+            name    "pivtottocentroid"
+            label   "Set Pivot To Centroid"
+            type    button
+            default { "0" }
+            export  all
+            parmtag { "script_callback" "hou.pwd().hdaModule().SetPivotToCentroid(hou.pwd())" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "p"
+            label   "Pivot Translate"
+            type    vector
+            size    3
+            default { "0" "0" "0" }
+            range   { -1 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "pr"
+            label   "Pivot Rotate"
+            type    vector
+            size    3
+            default { "0" "0" "0" }
+            range   { 0 360 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "centroid"
+            label   "Centroid"
+            type    vector
+            invisible
+            size    3
+            default { [ "centroid(0,D_X)" hscript-expr ] [ "centroid(0,D_Y)" hscript-expr ] [ "centroid(0,D_Z)" hscript-expr ] }
+            range   { -1 1 }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+}

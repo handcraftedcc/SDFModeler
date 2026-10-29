@@ -1,0 +1,125 @@
+# Dialog script for Dominik::SDFMPostFixFaces::1.0 automatically generated
+
+{
+    name	Dominik::SDFMPostFixFaces::1.0
+    script	Dominik::SDFMPostFixFaces::1.0
+    label	"SDFM Post Fix Faces"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    parm {
+        name    "faces"
+        label   "Faces"
+        type    string
+        default { "" }
+        menutoggle {
+            [ "opmenu -l -a group9 basegroup" ]
+        }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_action" "import soputils\npath = kwargs['node'].path()\nkwargs['node'] = hou.node(path)\nkwargs['geometrytype'] = hou.geometryType.Primitives #Replace \"Primitives\" with \nkwargs['inputindex'] = 0\nsoputils.selectGroupParm(kwargs)" }
+        parmtag { "script_action_help" "Select geometry from an available viewport.\nShift-click to turn on Select Groups." }
+        parmtag { "script_action_icon" "BUTTONS_reselect" }
+    }
+    parm {
+        name    "rebuildcurvature"
+        label   "Rebuild Curvature"
+        type    toggle
+        default { "0" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "remeshsize"
+        label   "Remesh Size (x voxelsize)"
+        type    float
+        default { "1" }
+        hidewhen "{ rebuildcurvature == 0 }"
+        range   { 0 10 }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "strength"
+        label   "Strength"
+        type    float
+        default { "50" }
+        hidewhen "{ rebuildcurvature == 0 }"
+        range   { 0! 50 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "filterquality"
+        label   "Filter Quality"
+        type    integer
+        default { "2" }
+        hidewhen "{ rebuildcurvature == 0 }"
+        range   { 1! 5! }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "sepparm"
+        label   "Separator"
+        type    separator
+        default { "" }
+    }
+    groupcollapsible {
+        name    "folder0"
+        label   "Normals"
+
+        parm {
+            name    "docompute"
+            label   "Compute Normals"
+            type    toggle
+            default { "on" }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "type"
+            label   "Add Normals to"
+            type    ordinal
+            default { "typevertex" }
+            menu {
+                "typepoint"     "Points"
+                "typevertex"    "Vertices"
+                "typeprim"      "Primitives"
+                "typedetail"    "Detail"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "cuspangle"
+            label   "Cusp Angle"
+            type    float
+            default { "12" }
+            disablewhen "{ docompute == 0 } { type != typevertex }"
+            range   { 0! 180! }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "method"
+            label   "Weighting Method"
+            type    integer
+            default { "2" }
+            disablewhen "{ docompute == 0 }"
+            menu {
+                "uniform"   "Each Vertex Equally"
+                "angle"     "By Vertex Angle"
+                "area"      "By Face Area"
+            }
+            range   { 0! 2! }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+}

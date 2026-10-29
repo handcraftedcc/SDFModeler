@@ -1,0 +1,14 @@
+Operator:     dom::SDFM_MeshPrim::1.0
+Label:        SDFM Mesh Prim
+Path:         oplib:/dom::Sop/SDFM_MeshPrim::1.0?dom::Sop/SDFM_MeshPrim::1.0
+Icon:         opdef:/dom::Sop/SDFM_MeshPrim::1.0?IconSVG
+Table:        Sop
+License:      
+Extra:        inputcolors='1 "RGB 0.677404 0.677404 0.677404" ' outputcolors='1 "RGB 0.677404 0.677404 0.677404" ' 
+User:         
+Inputs:       1 to 1
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Mon Jan  8 09:57:30 2024
+

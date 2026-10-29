@@ -1,0 +1,171 @@
+# Dialog script for Dom::SDFMPrimConvert2Polygons::1.0 automatically generated
+
+{
+    name	Dom::SDFMPrimConvert2Polygons::1.0
+    script	Dom::SDFMPrimConvert2Polygons::1.0
+    label	"SDFM Prim Convert 2 Polygons"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    group {
+        name    "folder0"
+        label   "Geometry Settings"
+
+        parm {
+            name    "normalcuspangle"
+            label   "Normal Cusp Angle"
+            type    float
+            default { "40" }
+            range   { 0! 180! }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "sepparm5"
+            label   "Separator"
+            type    separator
+            default { "" }
+        }
+        parm {
+            name    "beveldivisions"
+            label   "Bevel Divisions"
+            type    integer
+            default { "6" }
+            range   { 1! 20 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "sepparm"
+            label   "Separator"
+            type    separator
+            default { "" }
+        }
+        parm {
+            name    "sphererows"
+            label   "Sphere Rows"
+            type    integer
+            default { "32" }
+            range   { 3! 50 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "spherecols"
+            label   "Sphere Columns"
+            type    integer
+            default { "32" }
+            range   { 3! 50 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "sepparm2"
+            label   "Separator"
+            type    separator
+            default { "" }
+        }
+        parm {
+            name    "tubecols"
+            label   "Tube Columns"
+            type    integer
+            default { "32" }
+            range   { 3! 50 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "sepparm3"
+            label   "Separator"
+            type    separator
+            default { "" }
+        }
+        parm {
+            name    "capsulecols"
+            label   "Capsule Columns"
+            type    integer
+            default { "32" }
+            range   { 1! 128 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "capsulecapdivs"
+            label   "Capsule Cap Divisions"
+            type    integer
+            default { "10" }
+            range   { 1! 20 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "sepparm4"
+            label   "Separator"
+            type    separator
+            default { "" }
+        }
+        parm {
+            name    "torusrows"
+            label   "Torus Rows"
+            type    integer
+            default { "32" }
+            range   { 3! 50 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "toruscols"
+            label   "Torus Columns"
+            type    integer
+            default { "64" }
+            range   { 3! 128 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "sepparm6"
+            label   "Separator"
+            type    separator
+            default { "" }
+        }
+        parm {
+            name    "pyramidsubd"
+            label   "Pyramid Subdivisions"
+            type    integer
+            default { "2" }
+            range   { 0! 6 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "sepparm7"
+            label   "Separator"
+            type    separator
+            default { "" }
+        }
+        parm {
+            name    "octahedronsubd"
+            label   "Octahedron Subdivisions"
+            type    integer
+            default { "2" }
+            range   { 0! 6 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "doshell"
+            label   "Do Shell"
+            type    toggle
+            default { "1" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+}

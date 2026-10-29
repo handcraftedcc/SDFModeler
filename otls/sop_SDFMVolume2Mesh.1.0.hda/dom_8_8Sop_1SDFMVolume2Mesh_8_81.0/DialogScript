@@ -1,0 +1,258 @@
+# Dialog script for dom::SDFMVolume2Mesh::1.0 automatically generated
+
+{
+    name	dom::SDFMVolume2Mesh::1.0
+    script	dom::SDFMVolume2Mesh::1.0
+    label	"SDFM Volume 2 Mesh"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    parm {
+        name    "smooth"
+        label   "Smooth"
+        type    toggle
+        default { "0" }
+        range   { 0! 10 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    groupsimple {
+        name    "folder0"
+        label   "Smooth"
+        hidewhen "{ smooth == 0 }"
+
+        parm {
+            name    "operation"
+            label   "Operation"
+            type    string
+            default { "meanvalue" }
+            menu {
+                "meanvalue"     "Mean Value"
+                "gaussian"      "Gaussian"
+                "medianvalue"   "Median Value"
+                "meancurvature" "Mean Curvature Flow"
+                "laplacianflow" "Laplacian Flow"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "useworldspaceunits"
+            label   "Use World Space Units"
+            type    toggle
+            default { "off" }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "radiusworld"
+            label   "Filter Radius"
+            type    float
+            default { "0.1" }
+            hidewhen "{ useworldspaceunits == 0 }"
+            range   { 1e-05! 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "houdini_utils::doc" "The desired radius of the filter" }
+        }
+        parm {
+            name    "radius"
+            label   "Filter Voxel Radius"
+            type    integer
+            default { "1" }
+            hidewhen "{ useworldspaceunits == 1 }"
+            range   { 1! 5 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "houdini_utils::doc" "" }
+        }
+        parm {
+            name    "iterations"
+            label   "Iterations"
+            type    integer
+            default { "1" }
+            range   { 0! 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+    parm {
+        name    "sepparm"
+        label   "Separator"
+        type    separator
+        default { "" }
+    }
+    parm {
+        name    "segmentpieces"
+        label   "Segment Pieces"
+        type    toggle
+        default { "0" }
+        help    "Create seperate meshes for disconnected pieces with unique names and color."
+        parmtag { "script_callback_language" "python" }
+    }
+    groupsimple {
+        name    "folder3"
+        label   "Segmentation"
+        hidewhen "{ segmentpieces == 0 }"
+
+        parm {
+            name    "colorsegments"
+            label   "Color Segments"
+            type    toggle
+            default { "on" }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "houdini_utils::doc" "If enabled, assign a unique, random color to each segment for ease of identification." }
+        }
+        parm {
+            name    "appendnumber"
+            label   "Append Segment Number to Grid Name"
+            type    toggle
+            default { "on" }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "houdini_utils::doc" "If enabled, name each output VDB after the input VDB with a unique segment number appended for ease of identification." }
+        }
+        parm {
+            name    "sepoffset"
+            label   "Seperation Offset"
+            type    float
+            default { "1.25" }
+            help    "Temporarily offset surface to ensure segmentation with small gaps. Multiplied by voxel size."
+            range   { 0 4 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "extrapolate"
+            label   "Extrapolate"
+            type    toggle
+            default { "0" }
+            help    "Can fix artifacts at seams."
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "dilate"
+            label   "Dilation"
+            type    integer
+            default { "1" }
+            help    "Can fix artifacts at seams."
+            hidewhen "{ extrapolate == 0 }"
+            range   { 0! 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "houdini_utils::doc" "Specifies the number of voxels around an SDF narrow-band to be dilated." }
+        }
+    }
+
+    parm {
+        name    "sepparm3"
+        label   "Separator"
+        type    separator
+        default { "" }
+    }
+    groupsimple {
+        name    "folder1"
+        label   "Meshing"
+
+        parm {
+            name    "isovalue"
+            label   "Isovalue"
+            type    float
+            default { "0" }
+            range   { -0.25 0.25 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "adaptivity"
+            label   "Adaptivity"
+            type    float
+            default { "0" }
+            range   { 0! 2! }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "inversePeak"
+            label   "Invert iso-offset after meshing"
+            type    toggle
+            default { "0" }
+            help    "This combined with the iso value can result in sharpened convex edges while softened concanve edges or vice versa."
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+    parm {
+        name    "sepparm2"
+        label   "Separator"
+        type    separator
+        default { "" }
+    }
+    parm {
+        name    "docompute"
+        label   "Compute Normals"
+        type    toggle
+        default { "on" }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    groupsimple {
+        name    "folder2"
+        label   "Normals"
+        hidewhen "{ docompute == 0 }"
+
+        parm {
+            name    "type"
+            label   "Add Normals to"
+            type    ordinal
+            default { "typevertex" }
+            disablewhen "{ docompute == 0 }"
+            menu {
+                "typepoint"     "Points"
+                "typevertex"    "Vertices"
+                "typeprim"      "Primitives"
+                "typedetail"    "Detail"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "cuspangle"
+            label   "Cusp Angle"
+            type    float
+            default { "85" }
+            disablewhen "{ docompute == 0 } { type != typevertex }"
+            range   { 0! 180! }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "method"
+            label   "Weighting Method"
+            type    integer
+            default { "2" }
+            disablewhen "{ docompute == 0 }"
+            menu {
+                "uniform"   "Each Vertex Equally"
+                "angle"     "By Vertex Angle"
+                "area"      "By Face Area"
+            }
+            range   { 0! 2! }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "reverse"
+            label   "Reverse Normals"
+            type    toggle
+            default { "off" }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+}

@@ -1,0 +1,946 @@
+# Dialog script for dom::SDFM_Assembler::1.23 automatically generated
+
+{
+    name	dom::SDFM_Assembler::1.23
+    script	dom::SDFM_Assembler::1.0
+    label	"SDFM Assembler"
+
+    help {
+	""
+    }
+    bindhandle tx boundingbox "Box_Transformer" centerx "movetool_candidate(1) ownerop('box2')"
+    bindhandle ty boundingbox "Box_Transformer" centery "movetool_candidate(1) ownerop('box2')"
+    bindhandle tz boundingbox "Box_Transformer" centerz "movetool_candidate(1) ownerop('box2')"
+    bindhandle sizex boundingbox "Box_Transformer" sizex "movetool_candidate(1) ownerop('box2')"
+    bindhandle sizey boundingbox "Box_Transformer" sizey "movetool_candidate(1) ownerop('box2')"
+    bindhandle sizez boundingbox "Box_Transformer" sizez "movetool_candidate(1) ownerop('box2')"
+    bindhandle scale boundingbox "Box_Transformer" uniform_scale "movetool_candidate(1) ownerop('box2')"
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+    inputlabel	5	"Input #5"
+    inputlabel	6	"Input #6"
+    inputlabel	7	"Input #7"
+    inputlabel	8	"Input #8"
+    inputlabel	9	"Input #9"
+    inputlabel	10	"Input #10"
+    inputlabel	11	"Input #11"
+    inputlabel	12	"Input #12"
+    inputlabel	13	"Input #13"
+    inputlabel	14	"Input #14"
+    inputlabel	15	"Input #15"
+    inputlabel	16	"Input #16"
+    inputlabel	17	"Input #17"
+    inputlabel	18	"Input #18"
+    inputlabel	19	"Input #19"
+    inputlabel	20	"Input #20"
+    inputlabel	21	"Input #21"
+    inputlabel	22	"Input #22"
+    inputlabel	23	"Input #23"
+    inputlabel	24	"Input #24"
+    inputlabel	25	"Input #25"
+    inputlabel	26	"Input #26"
+    inputlabel	27	"Input #27"
+    inputlabel	28	"Input #28"
+    inputlabel	29	"Input #29"
+    inputlabel	30	"Input #30"
+    inputlabel	31	"Input #31"
+    inputlabel	32	"Input #32"
+    inputlabel	33	"Input #33"
+    inputlabel	34	"Input #34"
+    inputlabel	35	"Input #35"
+    inputlabel	36	"Input #36"
+    inputlabel	37	"Input #37"
+    inputlabel	38	"Input #38"
+    inputlabel	39	"Input #39"
+    inputlabel	40	"Input #40"
+    inputlabel	41	"Input #41"
+    inputlabel	42	"Input #42"
+    inputlabel	43	"Input #43"
+    inputlabel	44	"Input #44"
+    inputlabel	45	"Input #45"
+    inputlabel	46	"Input #46"
+    inputlabel	47	"Input #47"
+    inputlabel	48	"Input #48"
+    inputlabel	49	"Input #49"
+    inputlabel	50	"Input #50"
+    inputlabel	51	"Input #51"
+    inputlabel	52	"Input #52"
+    inputlabel	53	"Input #53"
+    inputlabel	54	"Input #54"
+    inputlabel	55	"Input #55"
+    inputlabel	56	"Input #56"
+    inputlabel	57	"Input #57"
+    inputlabel	58	"Input #58"
+    inputlabel	59	"Input #59"
+    inputlabel	60	"Input #60"
+    inputlabel	61	"Input #61"
+    inputlabel	62	"Input #62"
+    inputlabel	63	"Input #63"
+    inputlabel	64	"Input #64"
+    inputlabel	65	"Input #65"
+    inputlabel	66	"Input #66"
+    inputlabel	67	"Input #67"
+    inputlabel	68	"Input #68"
+    inputlabel	69	"Input #69"
+    inputlabel	70	"Input #70"
+    inputlabel	71	"Input #71"
+    inputlabel	72	"Input #72"
+    inputlabel	73	"Input #73"
+    inputlabel	74	"Input #74"
+    inputlabel	75	"Input #75"
+    inputlabel	76	"Input #76"
+    inputlabel	77	"Input #77"
+    inputlabel	78	"Input #78"
+    inputlabel	79	"Input #79"
+    inputlabel	80	"Input #80"
+    inputlabel	81	"Input #81"
+    inputlabel	82	"Input #82"
+    inputlabel	83	"Input #83"
+    inputlabel	84	"Input #84"
+    inputlabel	85	"Input #85"
+    inputlabel	86	"Input #86"
+    inputlabel	87	"Input #87"
+    inputlabel	88	"Input #88"
+    inputlabel	89	"Input #89"
+    inputlabel	90	"Input #90"
+    inputlabel	91	"Input #91"
+    inputlabel	92	"Input #92"
+    inputlabel	93	"Input #93"
+    inputlabel	94	"Input #94"
+    inputlabel	95	"Input #95"
+    inputlabel	96	"Input #96"
+    inputlabel	97	"Input #97"
+    inputlabel	98	"Input #98"
+    inputlabel	99	"Input #99"
+    inputlabel	100	"Input #100"
+    inputlabel	101	"Input #101"
+    inputlabel	102	"Input #102"
+    inputlabel	103	"Input #103"
+    inputlabel	104	"Input #104"
+    inputlabel	105	"Input #105"
+    inputlabel	106	"Input #106"
+    inputlabel	107	"Input #107"
+    inputlabel	108	"Input #108"
+    inputlabel	109	"Input #109"
+    inputlabel	110	"Input #110"
+    inputlabel	111	"Input #111"
+    inputlabel	112	"Input #112"
+    inputlabel	113	"Input #113"
+    inputlabel	114	"Input #114"
+    inputlabel	115	"Input #115"
+    inputlabel	116	"Input #116"
+    inputlabel	117	"Input #117"
+    inputlabel	118	"Input #118"
+    inputlabel	119	"Input #119"
+    inputlabel	120	"Input #120"
+    inputlabel	121	"Input #121"
+    inputlabel	122	"Input #122"
+    inputlabel	123	"Input #123"
+    inputlabel	124	"Input #124"
+    inputlabel	125	"Input #125"
+    inputlabel	126	"Input #126"
+    inputlabel	127	"Input #127"
+    inputlabel	128	"Input #128"
+    inputlabel	129	"Input #129"
+    inputlabel	130	"Input #130"
+    inputlabel	131	"Input #131"
+    inputlabel	132	"Input #132"
+    inputlabel	133	"Input #133"
+    inputlabel	134	"Input #134"
+    inputlabel	135	"Input #135"
+    inputlabel	136	"Input #136"
+    inputlabel	137	"Input #137"
+    inputlabel	138	"Input #138"
+    inputlabel	139	"Input #139"
+    inputlabel	140	"Input #140"
+    inputlabel	141	"Input #141"
+    inputlabel	142	"Input #142"
+    inputlabel	143	"Input #143"
+    inputlabel	144	"Input #144"
+    inputlabel	145	"Input #145"
+    inputlabel	146	"Input #146"
+    inputlabel	147	"Input #147"
+    inputlabel	148	"Input #148"
+    inputlabel	149	"Input #149"
+    inputlabel	150	"Input #150"
+    inputlabel	151	"Input #151"
+    inputlabel	152	"Input #152"
+    inputlabel	153	"Input #153"
+    inputlabel	154	"Input #154"
+    inputlabel	155	"Input #155"
+    inputlabel	156	"Input #156"
+    inputlabel	157	"Input #157"
+    inputlabel	158	"Input #158"
+    inputlabel	159	"Input #159"
+    inputlabel	160	"Input #160"
+    inputlabel	161	"Input #161"
+    inputlabel	162	"Input #162"
+    inputlabel	163	"Input #163"
+    inputlabel	164	"Input #164"
+    inputlabel	165	"Input #165"
+    inputlabel	166	"Input #166"
+    inputlabel	167	"Input #167"
+    inputlabel	168	"Input #168"
+    inputlabel	169	"Input #169"
+    inputlabel	170	"Input #170"
+    inputlabel	171	"Input #171"
+    inputlabel	172	"Input #172"
+    inputlabel	173	"Input #173"
+    inputlabel	174	"Input #174"
+    inputlabel	175	"Input #175"
+    inputlabel	176	"Input #176"
+    inputlabel	177	"Input #177"
+    inputlabel	178	"Input #178"
+    inputlabel	179	"Input #179"
+    inputlabel	180	"Input #180"
+    inputlabel	181	"Input #181"
+    inputlabel	182	"Input #182"
+    inputlabel	183	"Input #183"
+    inputlabel	184	"Input #184"
+    inputlabel	185	"Input #185"
+    inputlabel	186	"Input #186"
+    inputlabel	187	"Input #187"
+    inputlabel	188	"Input #188"
+    inputlabel	189	"Input #189"
+    inputlabel	190	"Input #190"
+    inputlabel	191	"Input #191"
+    inputlabel	192	"Input #192"
+    inputlabel	193	"Input #193"
+    inputlabel	194	"Input #194"
+    inputlabel	195	"Input #195"
+    inputlabel	196	"Input #196"
+    inputlabel	197	"Input #197"
+    inputlabel	198	"Input #198"
+    inputlabel	199	"Input #199"
+    inputlabel	200	"Input #200"
+    inputlabel	201	"Input #201"
+    inputlabel	202	"Input #202"
+    inputlabel	203	"Input #203"
+    inputlabel	204	"Input #204"
+    inputlabel	205	"Input #205"
+    inputlabel	206	"Input #206"
+    inputlabel	207	"Input #207"
+    inputlabel	208	"Input #208"
+    inputlabel	209	"Input #209"
+    inputlabel	210	"Input #210"
+    inputlabel	211	"Input #211"
+    inputlabel	212	"Input #212"
+    inputlabel	213	"Input #213"
+    inputlabel	214	"Input #214"
+    inputlabel	215	"Input #215"
+    inputlabel	216	"Input #216"
+    inputlabel	217	"Input #217"
+    inputlabel	218	"Input #218"
+    inputlabel	219	"Input #219"
+    inputlabel	220	"Input #220"
+    inputlabel	221	"Input #221"
+    inputlabel	222	"Input #222"
+    inputlabel	223	"Input #223"
+    inputlabel	224	"Input #224"
+    inputlabel	225	"Input #225"
+    inputlabel	226	"Input #226"
+    inputlabel	227	"Input #227"
+    inputlabel	228	"Input #228"
+    inputlabel	229	"Input #229"
+    inputlabel	230	"Input #230"
+    inputlabel	231	"Input #231"
+    inputlabel	232	"Input #232"
+    inputlabel	233	"Input #233"
+    inputlabel	234	"Input #234"
+    inputlabel	235	"Input #235"
+    inputlabel	236	"Input #236"
+    inputlabel	237	"Input #237"
+    inputlabel	238	"Input #238"
+    inputlabel	239	"Input #239"
+    inputlabel	240	"Input #240"
+    inputlabel	241	"Input #241"
+    inputlabel	242	"Input #242"
+    inputlabel	243	"Input #243"
+    inputlabel	244	"Input #244"
+    inputlabel	245	"Input #245"
+    inputlabel	246	"Input #246"
+    inputlabel	247	"Input #247"
+    inputlabel	248	"Input #248"
+    inputlabel	249	"Input #249"
+    inputlabel	250	"Input #250"
+    inputlabel	251	"Input #251"
+    inputlabel	252	"Input #252"
+    inputlabel	253	"Input #253"
+    inputlabel	254	"Input #254"
+    inputlabel	255	"Input #255"
+    inputlabel	256	"Input #256"
+    inputlabel	257	"Input #257"
+    inputlabel	258	"Input #258"
+    inputlabel	259	"Input #259"
+    inputlabel	260	"Input #260"
+    inputlabel	261	"Input #261"
+    inputlabel	262	"Input #262"
+    inputlabel	263	"Input #263"
+    inputlabel	264	"Input #264"
+    inputlabel	265	"Input #265"
+    inputlabel	266	"Input #266"
+    inputlabel	267	"Input #267"
+    inputlabel	268	"Input #268"
+    inputlabel	269	"Input #269"
+    inputlabel	270	"Input #270"
+    inputlabel	271	"Input #271"
+    inputlabel	272	"Input #272"
+    inputlabel	273	"Input #273"
+    inputlabel	274	"Input #274"
+    inputlabel	275	"Input #275"
+    inputlabel	276	"Input #276"
+    inputlabel	277	"Input #277"
+    inputlabel	278	"Input #278"
+    inputlabel	279	"Input #279"
+    inputlabel	280	"Input #280"
+    inputlabel	281	"Input #281"
+    inputlabel	282	"Input #282"
+    inputlabel	283	"Input #283"
+    inputlabel	284	"Input #284"
+    inputlabel	285	"Input #285"
+    inputlabel	286	"Input #286"
+    inputlabel	287	"Input #287"
+    inputlabel	288	"Input #288"
+    inputlabel	289	"Input #289"
+    inputlabel	290	"Input #290"
+    inputlabel	291	"Input #291"
+    inputlabel	292	"Input #292"
+    inputlabel	293	"Input #293"
+    inputlabel	294	"Input #294"
+    inputlabel	295	"Input #295"
+    inputlabel	296	"Input #296"
+    inputlabel	297	"Input #297"
+    inputlabel	298	"Input #298"
+    inputlabel	299	"Input #299"
+    inputlabel	300	"Input #300"
+    inputlabel	301	"Input #301"
+    inputlabel	302	"Input #302"
+    inputlabel	303	"Input #303"
+    inputlabel	304	"Input #304"
+    inputlabel	305	"Input #305"
+    inputlabel	306	"Input #306"
+    inputlabel	307	"Input #307"
+    inputlabel	308	"Input #308"
+    inputlabel	309	"Input #309"
+    inputlabel	310	"Input #310"
+    inputlabel	311	"Input #311"
+    inputlabel	312	"Input #312"
+    inputlabel	313	"Input #313"
+    inputlabel	314	"Input #314"
+    inputlabel	315	"Input #315"
+    inputlabel	316	"Input #316"
+    inputlabel	317	"Input #317"
+    inputlabel	318	"Input #318"
+    inputlabel	319	"Input #319"
+    inputlabel	320	"Input #320"
+    inputlabel	321	"Input #321"
+    inputlabel	322	"Input #322"
+    inputlabel	323	"Input #323"
+    inputlabel	324	"Input #324"
+    inputlabel	325	"Input #325"
+    inputlabel	326	"Input #326"
+    inputlabel	327	"Input #327"
+    inputlabel	328	"Input #328"
+    inputlabel	329	"Input #329"
+    inputlabel	330	"Input #330"
+    inputlabel	331	"Input #331"
+    inputlabel	332	"Input #332"
+    inputlabel	333	"Input #333"
+    inputlabel	334	"Input #334"
+    inputlabel	335	"Input #335"
+    inputlabel	336	"Input #336"
+    inputlabel	337	"Input #337"
+    inputlabel	338	"Input #338"
+    inputlabel	339	"Input #339"
+    inputlabel	340	"Input #340"
+    inputlabel	341	"Input #341"
+    inputlabel	342	"Input #342"
+    inputlabel	343	"Input #343"
+    inputlabel	344	"Input #344"
+    inputlabel	345	"Input #345"
+    inputlabel	346	"Input #346"
+    inputlabel	347	"Input #347"
+    inputlabel	348	"Input #348"
+    inputlabel	349	"Input #349"
+    inputlabel	350	"Input #350"
+    inputlabel	351	"Input #351"
+    inputlabel	352	"Input #352"
+    inputlabel	353	"Input #353"
+    inputlabel	354	"Input #354"
+    inputlabel	355	"Input #355"
+    inputlabel	356	"Input #356"
+    inputlabel	357	"Input #357"
+    inputlabel	358	"Input #358"
+    inputlabel	359	"Input #359"
+    inputlabel	360	"Input #360"
+    inputlabel	361	"Input #361"
+    inputlabel	362	"Input #362"
+    inputlabel	363	"Input #363"
+    inputlabel	364	"Input #364"
+    inputlabel	365	"Input #365"
+    inputlabel	366	"Input #366"
+    inputlabel	367	"Input #367"
+    inputlabel	368	"Input #368"
+    inputlabel	369	"Input #369"
+    inputlabel	370	"Input #370"
+    inputlabel	371	"Input #371"
+    inputlabel	372	"Input #372"
+    inputlabel	373	"Input #373"
+    inputlabel	374	"Input #374"
+    inputlabel	375	"Input #375"
+    inputlabel	376	"Input #376"
+    inputlabel	377	"Input #377"
+    inputlabel	378	"Input #378"
+    inputlabel	379	"Input #379"
+    inputlabel	380	"Input #380"
+    inputlabel	381	"Input #381"
+    inputlabel	382	"Input #382"
+    inputlabel	383	"Input #383"
+    inputlabel	384	"Input #384"
+    inputlabel	385	"Input #385"
+    inputlabel	386	"Input #386"
+    inputlabel	387	"Input #387"
+    inputlabel	388	"Input #388"
+    inputlabel	389	"Input #389"
+    inputlabel	390	"Input #390"
+    inputlabel	391	"Input #391"
+    inputlabel	392	"Input #392"
+    inputlabel	393	"Input #393"
+    inputlabel	394	"Input #394"
+    inputlabel	395	"Input #395"
+    inputlabel	396	"Input #396"
+    inputlabel	397	"Input #397"
+    inputlabel	398	"Input #398"
+    inputlabel	399	"Input #399"
+    inputlabel	400	"Input #400"
+    inputlabel	401	"Input #401"
+    inputlabel	402	"Input #402"
+    inputlabel	403	"Input #403"
+    inputlabel	404	"Input #404"
+    inputlabel	405	"Input #405"
+    inputlabel	406	"Input #406"
+    inputlabel	407	"Input #407"
+    inputlabel	408	"Input #408"
+    inputlabel	409	"Input #409"
+    inputlabel	410	"Input #410"
+    inputlabel	411	"Input #411"
+    inputlabel	412	"Input #412"
+    inputlabel	413	"Input #413"
+    inputlabel	414	"Input #414"
+    inputlabel	415	"Input #415"
+    inputlabel	416	"Input #416"
+    inputlabel	417	"Input #417"
+    inputlabel	418	"Input #418"
+    inputlabel	419	"Input #419"
+    inputlabel	420	"Input #420"
+    inputlabel	421	"Input #421"
+    inputlabel	422	"Input #422"
+    inputlabel	423	"Input #423"
+    inputlabel	424	"Input #424"
+    inputlabel	425	"Input #425"
+    inputlabel	426	"Input #426"
+    inputlabel	427	"Input #427"
+    inputlabel	428	"Input #428"
+    inputlabel	429	"Input #429"
+    inputlabel	430	"Input #430"
+    inputlabel	431	"Input #431"
+    inputlabel	432	"Input #432"
+    inputlabel	433	"Input #433"
+    inputlabel	434	"Input #434"
+    inputlabel	435	"Input #435"
+    inputlabel	436	"Input #436"
+    inputlabel	437	"Input #437"
+    inputlabel	438	"Input #438"
+    inputlabel	439	"Input #439"
+    inputlabel	440	"Input #440"
+    inputlabel	441	"Input #441"
+    inputlabel	442	"Input #442"
+    inputlabel	443	"Input #443"
+    inputlabel	444	"Input #444"
+    inputlabel	445	"Input #445"
+    inputlabel	446	"Input #446"
+    inputlabel	447	"Input #447"
+    inputlabel	448	"Input #448"
+    inputlabel	449	"Input #449"
+    inputlabel	450	"Input #450"
+    inputlabel	451	"Input #451"
+    inputlabel	452	"Input #452"
+    inputlabel	453	"Input #453"
+    inputlabel	454	"Input #454"
+    inputlabel	455	"Input #455"
+    inputlabel	456	"Input #456"
+    inputlabel	457	"Input #457"
+    inputlabel	458	"Input #458"
+    inputlabel	459	"Input #459"
+    inputlabel	460	"Input #460"
+    inputlabel	461	"Input #461"
+    inputlabel	462	"Input #462"
+    inputlabel	463	"Input #463"
+    inputlabel	464	"Input #464"
+    inputlabel	465	"Input #465"
+    inputlabel	466	"Input #466"
+    inputlabel	467	"Input #467"
+    inputlabel	468	"Input #468"
+    inputlabel	469	"Input #469"
+    inputlabel	470	"Input #470"
+    inputlabel	471	"Input #471"
+    inputlabel	472	"Input #472"
+    inputlabel	473	"Input #473"
+    inputlabel	474	"Input #474"
+    inputlabel	475	"Input #475"
+    inputlabel	476	"Input #476"
+    inputlabel	477	"Input #477"
+    inputlabel	478	"Input #478"
+    inputlabel	479	"Input #479"
+    inputlabel	480	"Input #480"
+    inputlabel	481	"Input #481"
+    inputlabel	482	"Input #482"
+    inputlabel	483	"Input #483"
+    inputlabel	484	"Input #484"
+    inputlabel	485	"Input #485"
+    inputlabel	486	"Input #486"
+    inputlabel	487	"Input #487"
+    inputlabel	488	"Input #488"
+    inputlabel	489	"Input #489"
+    inputlabel	490	"Input #490"
+    inputlabel	491	"Input #491"
+    inputlabel	492	"Input #492"
+    inputlabel	493	"Input #493"
+    inputlabel	494	"Input #494"
+    inputlabel	495	"Input #495"
+    inputlabel	496	"Input #496"
+    inputlabel	497	"Input #497"
+    inputlabel	498	"Input #498"
+    inputlabel	499	"Input #499"
+    inputlabel	500	"Input #500"
+    outputlabel	1	"SDF Output"
+    outputlabel	2	"Assembly Output"
+
+    parm {
+        name    "resetcookpass"
+        label   "Reset Cached Pass"
+        type    button
+        default { "0" }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "sepparm"
+        label   "Separator"
+        type    separator
+        default { "" }
+    }
+    parm {
+        name    "resmode"
+        label   "Resolution Mode"
+        type    ordinal
+        default { "0" }
+        help    "Resolution Mode: Will dynamically fit your assembly roughly to the selected resolution. This should keep performance somewhat consistent no matter the total size of the assembly, at the cost of detail. Best used while editing.  Voxel Size: This will keep the detail level consistent but performance will be heavily impacted by the size of your assembly. Best used for export when consistent resolution is necessary."
+        menu {
+            "0" "Voxel Count"
+            "1" "VoxelSize"
+        }
+        export  all
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "voxelcount"
+        label   "Voxel Count"
+        type    integer
+        default { "500000" }
+        hidewhen "{ resmode != 0 }"
+        menu usetokenvalue {
+            "25000"         "25k"
+            "100000"        "100k"
+            "500000"        "500k"
+            "1000000"       "1M"
+            "5000000"       "5M"
+            "10000000"      "10M"
+            "25000000"      "25M"
+            "50000000"      "50M"
+            "100000000"     "100M"
+            "250000000"     "250M"
+            "500000000"     "500M"
+            "750000000"     "750M"
+            "1000000000"    "1B"
+            "1500000000"    "1.5B"
+            "2000000000"    "2B"
+            "3000000000"    "3B"
+        }
+        range   { 0 10 }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "voxelsizequality"
+        label   "Quality"
+        type    ordinal
+        default { "2" }
+        help    "Divider for Voxel Size to modify detail level on the fly!"
+        hidewhen "{ resmode != 1 }"
+        menu usetokenvalue {
+            "1"     "0.25x"
+            "2"     "0.5x"
+            "4"     "1x"
+            "6"     "1.5x"
+            "8"     "2x"
+            "12"    "3x"
+            "16"    "4x"
+        }
+        export  all
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "voxelsize"
+        label   "Voxel Size"
+        type    float
+        default { "0.01" }
+        help    "Real world voxel size."
+        hidewhen "{ resmode != 1 }"
+        range   { 0! 10 }
+        export  all
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "bound"
+        label   "Bound"
+        type    float
+        default { "0.1" }
+        help    "Additional margin at bound. Adjust this if you run into clipping when using things like pipe or offset."
+        range   { 0 1 }
+        export  all
+        parmtag { "script_callback_language" "python" }
+    }
+    groupcollapsible {
+        name    "folder4"
+        label   "Working Region"
+
+        parm {
+            name    "enableWorkingRegion"
+            label   "Enable Working Region"
+            type    toggle
+            default { "0" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "fitworkregion"
+            label   "Fit Working Region"
+            type    button
+            default { "0" }
+            parmtag { "script_callback" "hou.pwd().hdaModule().fitWorkRegion(hou.pwd())" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "t"
+            label   "Center"
+            type    vector
+            size    3
+            default { "0" "0" "0" }
+            range   { -1 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "size"
+            label   "Size"
+            type    vector
+            size    3
+            default { "1" "1" "1" }
+            range   { -1 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "scale"
+            label   "Uniform Scale"
+            type    float
+            default { "1" }
+            range   { 0 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+    groupcollapsible {
+        name    "folder2"
+        label   "Other Settings"
+
+        parm {
+            name    "showPrimitiveGuides"
+            label   "Show Primitive Guides"
+            type    toggle
+            default { "0" }
+            parmtag { "script_callback_language" "python" }
+        }
+        groupsimple {
+            name    "folder3"
+            label   "Mesh Primitives"
+
+            parm {
+                name    "minhalfbanddist"
+                label   "Minimum Half Band Distance"
+                type    float
+                default { "0" }
+                help    "Controls the minimum bound voxels around mesh primitives. Increasing this value can help get rid of artifacts when using mesh primitives."
+                range   { 0 1 }
+                parmtag { "script_callback_language" "python" }
+            }
+        }
+
+    }
+
+    parm {
+        name    "sepparm2"
+        label   "Separator"
+        type    separator
+        default { "" }
+    }
+    groupcollapsible {
+        name    "folder0"
+        label   "Output"
+
+        parm {
+            name    "assemblyName"
+            label   "Assemby Name"
+            type    string
+            default { [ "$OS" hscript-expr ] }
+            help    "Assembly name for keeping track. Not essential to functionality."
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "volumepostprocessing"
+            label   "Volume Post Processing"
+            type    ordinal
+            default { "0" }
+            help    "None: The fastest, and best for when editing.   Convert to VDB: Converts volume to VDB   VDB+Optimize: Converts to VDB but also trims off empty parts of VDB. Great for effecient storage. Might impact detail level a little bit.   Prep for reuse: If you want to use the volume output of this assembler in another assembler this will prepare the volume for that."
+            menu {
+                "0" "None"
+                "1" "Convert to VDB"
+                "2" "VDB + Optimize"
+                "3" "Prep for Reuse"
+            }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "vdbextrapolate7_dilate"
+            label   "Dilation"
+            type    integer
+            default { "40" }
+            help    "Dilates the volume. If you run into edges when doing things like bevels or chamfers upping this should help get rid of those."
+            hidewhen "{ volumepostprocessing != 3 }"
+            range   { 0! 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "houdini_utils::doc" "Specifies the number of voxels around an SDF narrow-band to be dilated." }
+        }
+        groupsimple {
+            name    "folder1"
+            label   "Combine Settings"
+            grouptag { "import_enable" "1" }
+            grouptag { "import_source" "op:SDFM_Properties1" }
+            grouptag { "import_token" "folder0:Combine Settings" }
+            grouptag { "visibletabs" "1" }
+
+            parm {
+                name    "colorbymode"
+                label   "Colorize By Mode"
+                type    toggle
+                default { "on" }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "import_source" "op:SDFM_Properties1" }
+                parmtag { "import_token" "colorbymode" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "combinemode"
+                label   "Mode"
+                type    ordinal
+                default { "0" }
+                menu {
+                    "0" "Union"
+                    "1" "Intersect"
+                    "2" "Difference"
+                    "3" "Other"
+                }
+                range   { 0 10 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "import_source" "op:SDFM_Properties1" }
+                parmtag { "import_token" "combinemode" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "typeuni"
+                label   "Type"
+                type    ordinal
+                default { "0" }
+                hidewhen "{ combinemode != 0 }"
+                menu {
+                    "0" "Chamfer"
+                    "1" "Round"
+                    "2" "Columns"
+                    "3" "Stairs"
+                    "4" "Soft"
+                }
+                range   { 0 10 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "import_source" "op:SDFM_Properties1" }
+                parmtag { "import_token" "typeuni" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "typeinters"
+                label   "Type"
+                type    ordinal
+                default { "0" }
+                hidewhen "{ combinemode != 1 }"
+                menu {
+                    "0" "Chamfer"
+                    "1" "Round"
+                    "2" "Columns"
+                    "3" "Stairs"
+                }
+                range   { 0 10 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "import_source" "op:SDFM_Properties1" }
+                parmtag { "import_token" "typeinters" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "typediff"
+                label   "Type"
+                type    ordinal
+                default { "0" }
+                hidewhen "{ combinemode != 2 }"
+                menu {
+                    "0" "Chamfer"
+                    "1" "Round"
+                    "2" "Columns"
+                    "3" "Stairs"
+                }
+                range   { 0 10 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "import_source" "op:SDFM_Properties1" }
+                parmtag { "import_token" "typediff" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "typeoth"
+                label   "Type"
+                type    ordinal
+                default { "0" }
+                hidewhen "{ combinemode != 3 }"
+                menu {
+                    "0" "Pipe"
+                    "1" "Engrave"
+                    "2" "Groove"
+                    "3" "Tongue"
+                    "4" "Offset"
+                }
+                range   { 0 10 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "import_source" "op:SDFM_Properties1" }
+                parmtag { "import_token" "typeoth" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "radius"
+                label   "Radius"
+                type    float
+                default { "0" }
+                hidewhen "{ combinemode == 3 typeoth == 2 } { combinemode == 3 typeoth == 3 } { combinemode == 3 typeoth == 4 }"
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "import_source" "op:SDFM_Properties1" }
+                parmtag { "import_token" "radius" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "offset"
+                label   "Offset"
+                type    float
+                default { "0" }
+                hidewhen "{ combinemode != 3 } { typeoth != 4 }"
+                range   { -0.25 0.25 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "import_source" "op:SDFM_Properties1" }
+                parmtag { "import_token" "offset" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "radiusa"
+                label   "Radius A"
+                type    float
+                default { "0.05" }
+                hidewhen "{ combinemode != 3 } { typeoth != 2 typeoth != 3 }"
+                range   { 0.001 0.2 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "import_source" "op:SDFM_Properties1" }
+                parmtag { "import_token" "radiusa" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "radiusb"
+                label   "Radius B"
+                type    float
+                default { "0.05" }
+                hidewhen "{ combinemode != 3 } { typeoth != 2 typeoth != 3 typeoth != 4 }"
+                range   { 0.001 0.2 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "import_source" "op:SDFM_Properties1" }
+                parmtag { "import_token" "radiusb" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "count"
+                label   "Count"
+                type    integer
+                default { "1" }
+                hidewhen "{ combinemode == 0 typeuni == 0 } { combinemode == 0 typeuni == 1 } { combinemode == 0 typeuni == 4 } { combinemode == 1 typeinters == 0 } { combinemode == 1 typeinters == 1 } { combinemode == 2 typediff == 0 } { combinemode == 2 typediff == 1 } { combinemode == 3 }"
+                range   { 1 10 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "import_source" "op:SDFM_Properties1" }
+                parmtag { "import_token" "count" }
+                parmtag { "script_callback_language" "python" }
+            }
+        }
+
+        groupsimple {
+            name    "folder1_1"
+            label   "Shell"
+            grouptag { "group_type" "simple" }
+            grouptag { "import_enable" "1" }
+            grouptag { "import_source" "op:SDFM_Properties1" }
+            grouptag { "import_token" "folder1:Shell" }
+            grouptag { "visibletabs" "1" }
+
+            parm {
+                name    "shelltoggle"
+                label   "Shell"
+                type    toggle
+                default { "off" }
+                help    "Enable Shell. Gives thickness to the \"walls\" of the shape, making it a shell instead of a solid object."
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "import_source" "op:SDFM_Properties1" }
+                parmtag { "import_token" "shelltoggle" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "shellthickness"
+                label   "Shell Thickness"
+                type    float
+                default { "0.05" }
+                help    "Thickness of Shell"
+                hidewhen "{ shelltoggle == 0 }"
+                range   { 0.0001 0.5 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "import_source" "op:SDFM_Properties1" }
+                parmtag { "import_token" "shellthickness" }
+                parmtag { "script_callback_language" "python" }
+            }
+        }
+
+    }
+
+}

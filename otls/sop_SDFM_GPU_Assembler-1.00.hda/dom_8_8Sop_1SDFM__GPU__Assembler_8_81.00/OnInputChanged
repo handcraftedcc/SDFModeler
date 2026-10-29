@@ -1,0 +1,2 @@
+node = kwargs["node"]
+node.hdaModule().fix_inputs(node)

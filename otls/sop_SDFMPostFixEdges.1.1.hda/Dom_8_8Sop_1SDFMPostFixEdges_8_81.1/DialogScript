@@ -1,0 +1,300 @@
+# Dialog script for Dom::SDFMPostFixEdges::1.1 automatically generated
+
+{
+    name	Dom::SDFMPostFixEdges::1.1
+    script	Dom::SDFMPostFixCorners::1.0
+    label	"SDFM Post Fix Edges"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    multiswitcher {
+        name    "corner"
+        label    "Corner"
+        default 1
+        parmtag { "multistartoffset" "0" }
+
+        parm {
+            name    "type#"
+            label   "Type"
+            type    ordinal
+            default { "0" }
+            menu {
+                "0" "Edges And Point"
+                "1" "Fuse Points"
+                "2" "Multiple Edges"
+                "3" "Edge Smooth"
+            }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "group_edgesandpoint_edges#"
+            label   "Edges"
+            type    string
+            default { "" }
+            hidewhen "{ type# != 0 }"
+            menutoggle {
+                [ "opmenu -l -a group4 basegroup" ]
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_action" "import soputils\npath = kwargs['node'].path()\nkwargs['node'] = hou.node(path)\nkwargs['geometrytype'] = hou.geometryType.Edges #Replace \"Primitives\" with \nkwargs['inputindex'] = 0\nsoputils.selectGroupParm(kwargs)" }
+            parmtag { "script_action_help" "Select geometry from an available viewport.\nShift-click to turn on Select Groups." }
+            parmtag { "script_action_icon" "BUTTONS_reselect" }
+        }
+        parm {
+            name    "group_edgesandpoint_point#"
+            label   "Corner Point"
+            type    string
+            default { "" }
+            hidewhen "{ type# != 0 }"
+            menutoggle {
+                [ "opmenu -l -a group5 basegroup" ]
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_action" "import soputils\npath = kwargs['node'].path()\nkwargs['node'] = hou.node(path)\nkwargs['geometrytype'] = hou.geometryType.Points #Replace \"Primitives\" with \nkwargs['inputindex'] = 0\nsoputils.selectGroupParm(kwargs)" }
+            parmtag { "script_action_help" "Select geometry from an available viewport.\nShift-click to turn on Select Groups." }
+            parmtag { "script_action_icon" "BUTTONS_reselect" }
+        }
+        parm {
+            name    "group_fusepoints_points#"
+            label   "Fuse Points"
+            type    string
+            default { "" }
+            hidewhen "{ type# != 1 }"
+            menutoggle {
+                [ "opmenu -l -a group5 basegroup" ]
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_action" "import soputils\npath = kwargs['node'].path()\nkwargs['node'] = hou.node(path)\nkwargs['geometrytype'] = hou.geometryType.Points #Replace \"Primitives\" with \nkwargs['inputindex'] = 0\nsoputils.selectGroupParm(kwargs)" }
+            parmtag { "script_action_help" "Select geometry from an available viewport.\nShift-click to turn on Select Groups." }
+            parmtag { "script_action_icon" "BUTTONS_reselect" }
+        }
+        parm {
+            name    "group_multipleedges_startedges#"
+            label   "Start Edges"
+            type    string
+            default { "" }
+            hidewhen "{ type# != 2 }"
+            menutoggle {
+                [ "opmenu -l -a group4 basegroup" ]
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_action" "import soputils\npath = kwargs['node'].path()\nkwargs['node'] = hou.node(path)\nkwargs['geometrytype'] = hou.geometryType.Edges #Replace \"Primitives\" with \nkwargs['inputindex'] = 0\nsoputils.selectGroupParm(kwargs)" }
+            parmtag { "script_action_help" "Select geometry from an available viewport.\nShift-click to turn on Select Groups." }
+            parmtag { "script_action_icon" "BUTTONS_reselect" }
+        }
+        parm {
+            name    "group_multipleedges_goaledge#"
+            label   "Goal Edge"
+            type    string
+            default { "" }
+            hidewhen "{ type# != 2 }"
+            menutoggle {
+                [ "opmenu -l -a group4 basegroup" ]
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_action" "import soputils\npath = kwargs['node'].path()\nkwargs['node'] = hou.node(path)\nkwargs['geometrytype'] = hou.geometryType.Edges #Replace \"Primitives\" with \nkwargs['inputindex'] = 0\nsoputils.selectGroupParm(kwargs)" }
+            parmtag { "script_action_help" "Select geometry from an available viewport.\nShift-click to turn on Select Groups." }
+            parmtag { "script_action_icon" "BUTTONS_reselect" }
+        }
+        parm {
+            name    "group_edgesmooth_edges#"
+            label   "Edges"
+            type    string
+            default { "" }
+            hidewhen "{ type# != 3 }"
+            menutoggle {
+                [ "opmenu -l -a group4 basegroup" ]
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_action" "import soputils\npath = kwargs['node'].path()\nkwargs['node'] = hou.node(path)\nkwargs['geometrytype'] = hou.geometryType.Edges #Replace \"Primitives\" with \nkwargs['inputindex'] = 0\nsoputils.selectGroupParm(kwargs)" }
+            parmtag { "script_action_help" "Select geometry from an available viewport.\nShift-click to turn on Select Groups." }
+            parmtag { "script_action_icon" "BUTTONS_reselect" }
+        }
+        groupcollapsible {
+            name    "folder0__#"
+            label   "Settings"
+
+            parm {
+                name    "tension1_#"
+                label   "Tension1"
+                type    float
+                default { "0.25" }
+                hidewhen "{ type# != 2 type# != 0 }"
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "tension2_#"
+                label   "Tension2"
+                type    float
+                default { "0.25" }
+                hidewhen "{ type# != 2 }"
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "sepparm_#"
+                label   "Separator"
+                type    separator
+                default { "" }
+                hidewhen "{ type# != 2 type# != 0 }"
+            }
+            parm {
+                name    "resamplelength#"
+                label   "Resample Length (x voxelsize)"
+                type    float
+                default { "2" }
+                hidewhen "{ type# != 2 type# != 0 type# != 3 }"
+                range   { 0 10 }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "sepparm2__#"
+                label   "Separator"
+                type    separator
+                default { "" }
+                hidewhen "{ type# != 2 type# != 0 type# != 3 }"
+            }
+            parm {
+                name    "togglerayandsmooth#"
+                label   "Toggle Ray and Smooth"
+                type    toggle
+                default { "1" }
+                hidewhen "{ type# != 0 type# != 2 }"
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "smoothstrength#"
+                label   "Smooth Strength"
+                type    float
+                default { "50" }
+                hidewhen "{ type# == 0 togglerayandsmooth# == 0 } { type# == 2 togglerayandsmooth# == 0 } { type# != 0 type# != 2 type# != 3 }"
+                range   { 0 50 }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "smoothfilter#"
+                label   "Smooth Filter Quality"
+                type    integer
+                default { "2" }
+                hidewhen "{ type# == 0 togglerayandsmooth# == 0 } { type# == 2 togglerayandsmooth# == 0 } { type# != 0 type# != 2 type# != 3 }"
+                range   { 1! 5! }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "_sepparm3__#"
+                label   "Separator"
+                type    separator
+                default { "" }
+                hidewhen "{ type# != 0 type# != 2 type# != 3 }"
+            }
+            parm {
+                name    "fusedist#"
+                label   "Fuse Distance (x voxelsize)"
+                type    float
+                default { "1" }
+                range   { 0 10 }
+                parmtag { "script_callback_language" "python" }
+            }
+        }
+
+    }
+
+    parm {
+        name    "sepparm"
+        label   "Separator"
+        type    separator
+        default { "" }
+    }
+    parm {
+        name    "fusesurrounding"
+        label   "Fuse Surrounding Points"
+        type    toggle
+        default { "1" }
+        parmtag { "script_callback_language" "python" }
+    }
+    groupcollapsible {
+        name    "folder0"
+        label   "Fuse Surrounding"
+        hidewhen "{ fusesurrounding != 1 }"
+
+        parm {
+            name    "numsteps"
+            label   "Expansion Steps"
+            type    integer
+            default { "2" }
+            range   { -10 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "tol3d"
+            label   "Snap Distance (x voxelsize)"
+            type    float
+            default { [ "1" hscript-expr ] }
+            range   { 0.001 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+    parm {
+        name    "sepparm2"
+        label   "Separator"
+        type    separator
+        default { "" }
+    }
+    groupcollapsible {
+        name    "folder0__"
+        label   "Normal Settings"
+
+        parm {
+            name    "type"
+            label   "Add Normals to"
+            type    ordinal
+            default { "typevertex" }
+            menu {
+                "typepoint"     "Points"
+                "typevertex"    "Vertices"
+                "typeprim"      "Primitives"
+                "typedetail"    "Detail"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "cuspangle"
+            label   "Cusp Angle"
+            type    float
+            default { "10" }
+            disablewhen "{ type != typevertex }"
+            range   { 0! 180! }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "method"
+            label   "Weighting Method"
+            type    integer
+            default { "2" }
+            menu {
+                "uniform"   "Each Vertex Equally"
+                "angle"     "By Vertex Angle"
+                "area"      "By Face Area"
+            }
+            range   { 0! 2! }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+}

@@ -1,0 +1,14 @@
+Operator:     dom::SDFM_Prim::1.6
+Label:        SDFM Prim
+Path:         oplib:/dom::Sop/SDFM_Prim::1.6?dom::Sop/SDFM_Prim::1.6
+Icon:         opdef:/dom::Sop/SDFM_Prim::1.6?IconSVG
+Table:        Sop
+License:      
+Extra:        guide=GUIDE inputcolors='0 ' outputcolors='1 "RGB 0.66972 0.66972 0.66972" ' 
+User:         
+Inputs:       0 to 0
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Tue Aug  4 18:19:36 2026
+

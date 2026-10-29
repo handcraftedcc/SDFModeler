@@ -1,0 +1,130 @@
+# Dialog script for Dom::SDFM_PostSharpenEdges::1.3 automatically generated
+
+{
+    name	Dom::SDFM_PostSharpenEdges::1.3
+    script	Dom::sdfm_MeshPostprocessSharpenEdges::1.0
+    label	"SDFM Post Sharpen Edges"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    parm {
+        name    "edgecurvatureexponent"
+        label   "Edge Curvature Exponent"
+        type    float
+        default { "0.1" }
+        help    "Used to mask edge geometry to disregard to rebuild surfaces."
+        range   { 0 0.2 }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "sepparm"
+        label   "Separator"
+        type    separator
+        default { "" }
+    }
+    parm {
+        name    "searchdist"
+        label   "Searchdist (x voxelsize)"
+        type    float
+        default { "6" }
+        help    "How far will edges search for surfaces to reference when rebuilding surfaces. Lower this value to reduce sharpening of small bevels, raise for smoother results."
+        range   { 1 10 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "maxsearchpoints"
+        label   "Maxsearchpoints"
+        type    integer
+        default { "40" }
+        help    "Maximum amount of surrounding surface points it will average to recreate surface. More points mean smoother results but more issues at intersections."
+        range   { 0 60 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "differintiatorangle"
+        label   "Differintiator Angle"
+        type    float
+        default { "12" }
+        help    "This angle is used to determine if found points are part of the same or different surface."
+        range   { 0 40 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "maxoffset"
+        label   "Max Offset (x voxelsize)"
+        type    float
+        default { "4" }
+        help    "Max amount a point is allowed to be displaced, before the offset being disregarded."
+        range   { 0 10 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "movedetectthreshold"
+        label   "Movedetectthreshold"
+        type    float
+        invisible
+        default { "0.1" }
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "planedistancecomparethreshold"
+        label   "Plane Distance Compare Threshold"
+        type    float
+        default { "1" }
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "sepparm2"
+        label   "Separator"
+        type    separator
+        default { "" }
+    }
+    parm {
+        name    "postprocess"
+        label   "Post Process"
+        type    toggle
+        default { "0" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "fuseDistance"
+        label   "Fuse Distance (x voxelsize)"
+        type    float
+        default { "1" }
+        help    "Fusing distance of points after edges being rebuilt."
+        hidewhen "{ postprocess != 1 }"
+        range   { 0 10 }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "sepparm3"
+        label   "Separator"
+        type    separator
+        default { "" }
+    }
+    parm {
+        name    "cuspangle"
+        label   "Normal Cusp Angle"
+        type    float
+        default { "12" }
+        help    "Cusp Angle for Final Normals"
+        range   { 0! 180! }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+}

@@ -1,0 +1,14 @@
+Operator:     Dom::SDFM_PostSharpenEdges::1.3
+Label:        SDFM Post Sharpen Edges
+Path:         oplib:/Dom::Sop/SDFM_PostSharpenEdges::1.3?Dom::Sop/SDFM_PostSharpenEdges::1.3
+Icon:         opdef:/Dom::Sop/SDFM_PostSharpenEdges::1.3?IconSVG
+Table:        Sop
+License:      
+Extra:        inputcolors='1 "RGB 0.66972 0.66972 0.66972" ' outputcolors='1 "RGB 0.66972 0.66972 0.66972" ' 
+User:         
+Inputs:       1 to 1
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Mon Jan  8 09:57:31 2024
+

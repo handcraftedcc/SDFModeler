@@ -1,0 +1,14 @@
+MOPS::Sop/Extract_Attributes::1.2 C:/Users/Dominik/Documents/Houdini Assets/Plugins/MOPS-1.7.8e/otls/MOPS_extractAttributes-MOPS__Extract_Attributes__1.2.hda
+MOPS::Sop/Extract_Attributes::1.2 otls/MOPS_extractAttributes-MOPS__Extract_Attributes__1.2.hda
+Sop/attribwrangle C:/PROGRA~1/SIDEEF~1/HOUDIN~1.569/houdini/otls/OPlibSop.hda
+Sop/attribwrangle otls/OPlibSop.hda
+dom::Sop/SDFM_Properties::1.0 C:/Users/Dominik/Documents/Houdini Assets/Project Packs/SDFModeler_local/otls/sop_dom.SDFM_Properties.1.0.hdalc
+dom::Sop/SDFM_Properties::1.0 otls/sop_dom.SDFM_Properties.1.0.hdalc
+dom::Sop/SDFM_VolumePrim::1.1 C:/Users/Dominik/Documents/Houdini Assets/Project Packs/SDFModeler_local/otls/sop_dom.SDFM_VolumePrim.1.1.hdalc
+dom::Sop/SDFM_VolumePrim::1.1 otls/sop_dom.SDFM_VolumePrim.1.1.hdalc
+labs::Sop/box_clip C:/Program Files/Side Effects Software/sidefx_packages/SideFXLabs-19.5.519/otls/box_clip.hda
+labs::Sop/box_clip otls/box_clip.hda
+Sop/split C:/PROGRA~1/SIDEEF~1/HOUDIN~1.569/houdini/otls/OPlibSop.hda
+Sop/split otls/OPlibSop.hda
+Sop/volumewrangle C:/PROGRA~1/SIDEEF~1/HOUDIN~1.569/houdini/otls/OPlibSop.hda
+Sop/volumewrangle otls/OPlibSop.hda

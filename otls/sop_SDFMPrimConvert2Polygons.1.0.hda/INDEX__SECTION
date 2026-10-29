@@ -1,0 +1,14 @@
+Operator:     Dom::SDFMPrimConvert2Polygons::1.0
+Label:        SDFM Prim Convert 2 Polygons
+Path:         oplib:/Dom::Sop/SDFMPrimConvert2Polygons::1.0?Dom::Sop/SDFMPrimConvert2Polygons::1.0
+Icon:         opdef:/Dom::Sop/SDFMPrimConvert2Polygons::1.0?IconSVG
+Table:        Sop
+License:      
+Extra:        inputcolors='1 "RGB 0.66972 0.66972 0.66972" ' outputcolors='1 "RGB 0.66972 0.66972 0.66972" ' 
+User:         
+Inputs:       1 to 1
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Mon Jan  8 09:57:26 2024
+

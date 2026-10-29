@@ -1,0 +1,29 @@
+{
+	"values":["19.5.569"
+	],
+	"indexes":{
+		"hdaroot/OUT.userdata":0,
+		"hdaroot/output0.userdata":0,
+		"hdaroot/transform1.userdata":0,
+		"hdaroot/READ.userdata":0,
+		"hdaroot/merge_IN_Surface0.userdata":0,
+		"hdaroot/null1.userdata":0,
+		"hdaroot/switch1.userdata":0,
+		"hdaroot/attribtransfer1.userdata":0,
+		"hdaroot/vdbresample1.userdata":0,
+		"hdaroot/vdbfrompolygons3.userdata":0,
+		"hdaroot/switch5.userdata":0,
+		"hdaroot/switch3.userdata":0,
+		"hdaroot/merge1.userdata":0,
+		"hdaroot/convertvdb1.userdata":0,
+		"hdaroot/switchreferencevdb.userdata":0,
+		"hdaroot/groupdelete1.userdata":0,
+		"hdaroot/vdbextrapolate3.userdata":0,
+		"hdaroot/switchifnoinput.userdata":0,
+		"hdaroot/IN_Surface0.userdata":0,
+		"hdaroot/vdbfrompolygons4.userdata":0,
+		"hdaroot/switch6.userdata":0,
+		"hdaroot/group1.userdata":0,
+		"hdaroot/switch4.userdata":0
+	}
+}

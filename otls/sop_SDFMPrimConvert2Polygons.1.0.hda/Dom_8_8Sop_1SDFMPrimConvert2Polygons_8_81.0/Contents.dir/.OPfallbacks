@@ -1,0 +1,8 @@
+Sop/attribwrangle C:/PROGRA~1/SIDEEF~1/HOUDIN~1.506/houdini/otls/OPlibSop.hda
+Sop/attribwrangle otls/OPlibSop.hda
+dom::Sop/SDFMVolume2Mesh::1.0 C:/Users/Dominik/Documents/Houdini Assets/Project Packs/SDFModeler_local/otls/sop_dom.SDFMVolume2Mesh.1.0.hdalc
+dom::Sop/SDFMVolume2Mesh::1.0 otls/sop_dom.SDFMVolume2Mesh.1.0.hdalc
+Sop/split C:/PROGRA~1/SIDEEF~1/HOUDIN~1.506/houdini/otls/OPlibSop.hda
+Sop/split otls/OPlibSop.hda
+Sop/volumewrangle C:/PROGRA~1/SIDEEF~1/HOUDIN~1.506/houdini/otls/OPlibSop.hda
+Sop/volumewrangle otls/OPlibSop.hda

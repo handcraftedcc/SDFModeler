@@ -1,0 +1,24 @@
+{
+	"values":["20.0.506"
+	],
+	"indexes":{
+		"hdaroot/output0.userdata":0,
+		"hdaroot/name1.userdata":0,
+		"hdaroot/convertvdb4.userdata":0,
+		"hdaroot/vdbsmoothsdf4.userdata":0,
+		"hdaroot/foreach_begin1.userdata":0,
+		"hdaroot/switch1.userdata":0,
+		"hdaroot/attribtransfer1.userdata":0,
+		"hdaroot/switch3.userdata":0,
+		"hdaroot/foreach_end1.userdata":0,
+		"hdaroot/peak1.userdata":0,
+		"hdaroot/convertvdb9.userdata":0,
+		"hdaroot/groupdelete1.userdata":0,
+		"hdaroot/normal1.userdata":0,
+		"hdaroot/vdbextrapolate1.userdata":0,
+		"hdaroot/group1.userdata":0,
+		"hdaroot/switch4.userdata":0,
+		"hdaroot/switch2.userdata":0,
+		"hdaroot/vdbsegmentbyconnectivity1.userdata":0
+	}
+}

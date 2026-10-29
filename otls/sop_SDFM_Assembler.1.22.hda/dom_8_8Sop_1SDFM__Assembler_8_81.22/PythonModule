@@ -1,0 +1,14 @@
+import hou
+
+def fitWorkRegion(self):
+    childnode = self.node("READ_bboxfit")
+    center = childnode.geometry().attribValue("center")
+    size = childnode.geometry().attribValue("size")
+    
+    self.parm("tx").set(center[0])
+    self.parm("ty").set(center[1])
+    self.parm("tz").set(center[2])   
+    self.parm("sizex").set(size[0])
+    self.parm("sizey").set(size[1])
+    self.parm("sizez").set(size[2]) 
+    self.parm("scale").set(1) 
