@@ -1888,7 +1888,7 @@ matchbyattribute	[ 0	locks=0 ]	(	"off"	)
 matchbyattributemethod	[ 0	locks=0 ]	(	"byvalues"	)
 attributetomatch	[ 0	locks=0 ]	(	piece	)
 attrib	[ 0	locks=0 ]	(	"otherattrib"	)
-attribname	[ 0	locks=0 ]	(	primscale	)
+attribname [ 0 locks=0 ] ( "primscale orient N up" )
 copyp	[ 0	locks=0 ]	(	"on"	)
 usenewname	[ 0	locks=0 ]	(	"off"	)
 newname	[ 0	locks=0 ]	(	""	)
@@ -2520,6 +2520,14 @@ if(chi(\"do_mops_orient\")) {
     matrix3 m = qconvert(p@orient);
     v@N = m * {0,0,1};
     v@up = m * {0,1,0};
+}
+
+// Keep extracted transforms on the packed primitives. The final descriptor
+// promotion must not replace them with defaults introduced by another asset.
+foreach (int primid; pointprims(0, @ptnum)) {
+    setprimattrib(0, \"orient\", primid, p@orient, \"set\");
+    setprimattrib(0, \"N\", primid, v@N, \"set\");
+    setprimattrib(0, \"up\", primid, v@up, \"set\");
 }"	)
 exportlist	[ 0	locks=0 ]	(	*	)
 vex_strict	[ 0	locks=0 ]	(	"off"	)
@@ -5209,7 +5217,9 @@ snippet	[ 0	locks=0 ]	(	"string types[] = array(
     \"capsule\",
     \"torus\",
     \"pyramid\",
-    \"octahedron\"
+    \"octahedron\",
+    \"curvewire\",
+    \"curveextruded\"
 );
 
 i@primtypeid = max(find(types, s@primtype), 0);"	)
@@ -6122,10 +6132,11 @@ Content-Type: text/plain
 
 comment ""
 position 6.13675 -4.24548
-connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display on render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on
+connectornextid 3
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on
 outputsNamed3
 {
+2 "output1"
 }
 inputsNamed3
 {
@@ -6188,7 +6199,7 @@ kernelcode	[ 0	locks=0 ]	(	"/*
       primscale float3 (defaults to {1,1,1})
 
     primtypeid values:
-      0 Box, 1 Sphere, 2 Tube, 3 Capsule, 4 Torus, 5 Pyramid, 6 Octahedron
+      0 Box, 1 Sphere, 2 Tube, 3 Capsule, 4 Torus, 5 Pyramid, 6 Octahedron, 7 Curve Wire (reserved), 8 Curve Extruded
 
     groupmarker values:
       0 Primitive, 1 Group Begin, 2 Group End
@@ -6255,6 +6266,94 @@ kernelcode	[ 0	locks=0 ]	(	"/*
 #bind point countz port=geo int
 #bind point bendamount port=geo float
 #bind point twistamount port=geo float
+
+// Extruded curve payloads. Optional bindings preserve existing scenes.
+#bind point curve_samples port=geo float[] optional
+#bind point curve_closed port=geo int optional val=0
+#bind point curve_profilemode port=geo int optional val=0
+#bind point curveradius port=geo float optional val=0.05
+#bind point curve_profileoffset port=geo float optional val=0
+#bind point curve_extrudemode port=geo int optional val=0
+#bind point curve_extrudedir port=geo int optional val=0
+#bind point curve_extrudeamount port=geo float optional val=0.5
+#bind point curve_topedgetype port=geo int optional val=0
+#bind point curve_topedgerad port=geo float optional val=0
+#bind point curve_bottomedgetype port=geo int optional val=0
+#bind point curve_bottomedgerad port=geo float optional val=0
+
+// Helpers embedded in the COP kernel; no runtime include dependency.
+// Distance to a linearly tapered sphere sweep along a 3D segment.
+// Includes round endpoints; valid even when one endpoint sphere contains
+// the complete sweep. Nonlinear radii are subdivided in prepare_wire.vfl.
+float curveWireSegment(float3 p, float3 a, float3 b, float ra, float rb)
+{
+    float3 v=b-a, q=p-a;
+    float l=length(v), dr=rb-ra;
+    if (l<1e-10f || fabs(dr)>=l)
+        return fmin(length(p-a)-ra,length(p-b)-rb);
+    float along=dot(q,v)/l;
+    float perpendicular=sqrt(fmax(dot(q,q)-along*along,0.0f));
+    float t=clamp((along+dr*perpendicular/sqrt(l*l-dr*dr))/l,0.0f,1.0f);
+    return length(q-t*v)-mix(ra,rb,t);
+}
+
+// Negative radius samples delimit independent curves in one wire descriptor.
+// Test unscaled multipliers so a zero wire radius still preserves the breaks.
+int curveWireIsSegment(float ra, float rb)
+{
+    return ra >= 0.0f && rb >= 0.0f;
+}
+
+float curveSegmentDistance(float2 p, float2 a, float2 b)
+{
+    float2 v=b-a;
+    float t=clamp(dot(p-a,v)/fmax(dot(v,v),1e-20f),0.0f,1.0f);
+    return length(p-a-t*v);
+}
+
+float curveTaperedStroke(float2 p, float2 a, float2 b, float ra, float rb)
+{
+    float2 v=b-a, q=p-a;
+    float l=length(v), dr=rb-ra;
+    if (l<1e-10f || fabs(dr)>=l)
+        return fmin(length(p-a)-ra,length(p-b)-rb);
+    float along=dot(q,v)/l;
+    float perpendicular=sqrt(fmax(dot(q,q)-along*along,0.0f));
+    float t=clamp((along+dr*perpendicular/sqrt(l*l-dr*dr))/l,0.0f,1.0f);
+    return length(q-t*v)-mix(ra,rb,t);
+}
+
+float curveCap(float profile, float axial, int style, float radius)
+{
+    float2 q=(float2)(profile,axial);
+    if (style==0 || radius<=0.0f)
+        return length(fmax(q,0.0f))+fmin(fmax(q.x,q.y),0.0f);
+    if (style==2)
+    {
+        q+=radius;
+        return length(fmax(q,0.0f))+fmin(fmax(q.x,q.y),0.0f)-radius;
+    }
+    // Exact distance to the chamfered intersection of two half planes.
+    float side=length((float2)(q.x,fmax(q.y+radius,0.0f)));
+    float cap=length((float2)(fmax(q.x+radius,0.0f),q.y));
+    float diagonal=curveSegmentDistance(q,(float2)(0,-radius),(float2)(-radius,0));
+    float distance=fmin(side,fmin(cap,diagonal));
+    return q.x<=0 && q.y<=0 && q.x+q.y<=-radius ? -distance : distance;
+}
+
+float curveExtrude(float profile, float z, float amount, int direction,
+                   int infinite, int topStyle, float topRadius,
+                   int bottomStyle, float bottomRadius)
+{
+    if (infinite) return profile;
+    float depth=fabs(amount);
+    float lo=direction ? -depth*0.5f : fmin(amount,0.0f);
+    float hi=direction ? depth*0.5f : fmax(amount,0.0f);
+    topRadius=clamp(topRadius,0.0f,depth*0.5f);
+    bottomRadius=clamp(bottomRadius,0.0f,depth*0.5f);
+    return fmax(curveCap(profile,z-hi,topStyle,topRadius),
+                curveCap(profile,lo-z,bottomStyle,bottomRadius));
+}
 
 #define SQRT_HALF 0.7071067811865475244f
 #define SQRT_TWO  1.4142135623730950488f
@@ -6956,10 +7055,76 @@ float combineValue(float a, float b, int mode, int type,
         {
             primitive = sdPyramid(p, dims);
         }
-        else
+        else if (primtype == 6)
         {
             primitive = sdOctahedron(p, dims);
         }
+        else if (primtype == 7)
+        {
+            int entries=@curve_samples.entriesAt(pointid);
+            int samples=entries/4;
+            if(samples<2 || entries%4) continue;
+            int edges=@curve_closed.getAt(pointid) ? samples : samples-1;
+            float radius=fmax(@curveradius.getAt(pointid),0.0f);
+            primitive=INFINITY;
+            for(int i=0;i<edges;++i)
+            {
+                int j=(i+1)%samples;
+                float3 a=(float3)(@curve_samples.compAt(pointid,i*4),@curve_samples.compAt(pointid,i*4+1),@curve_samples.compAt(pointid,i*4+2));
+                float3 b=(float3)(@curve_samples.compAt(pointid,j*4),@curve_samples.compAt(pointid,j*4+1),@curve_samples.compAt(pointid,j*4+2));
+                float sa=@curve_samples.compAt(pointid,i*4+3);
+                float sb=@curve_samples.compAt(pointid,j*4+3);
+                if(!curveWireIsSegment(sa,sb)) continue;
+                float ra=radius*sa;
+                float rb=radius*sb;
+                primitive=fmin(primitive,curveWireSegment(p,a,b,ra,rb));
+            }
+        }
+        else if (primtype == 8)
+        {
+            int entries=@curve_samples.entriesAt(pointid);
+            int samples=entries/3;
+            if(samples<2) continue;
+            int closed=@curve_closed.getAt(pointid);
+            int stroke=@curve_profilemode.getAt(pointid);
+            float profile=INFINITY;
+            int parity=0;
+            int edges=closed ? samples : samples-1;
+            for(int i=0;i<edges;++i)
+            {
+                int j=(i+1)%samples;
+                float2 a=(float2)(@curve_samples.compAt(pointid,i*3),@curve_samples.compAt(pointid,i*3+1));
+                float2 b=(float2)(@curve_samples.compAt(pointid,j*3),@curve_samples.compAt(pointid,j*3+1));
+                if(stroke)
+                {
+                    float radius=fmax(@curveradius.getAt(pointid),0.0f);
+                    float ra=radius*@curve_samples.compAt(pointid,i*3+2);
+                    float rb=radius*@curve_samples.compAt(pointid,j*3+2);
+                    profile=fmin(profile,curveTaperedStroke(p.xy,a,b,ra,rb));
+                }
+                else
+                {
+                    profile=fmin(profile,curveSegmentDistance(p.xy,a,b));
+                    if((a.y>p.y)!=(b.y>p.y))
+                    {
+                        float x=a.x+(p.y-a.y)*(b.x-a.x)/(b.y-a.y);
+                        if(p.x<x) parity^=1;
+                    }
+                }
+            }
+            if(!stroke && parity) profile=-profile;
+            profile-=@curve_profileoffset.getAt(pointid);
+            // UI override menu: 0 inherit, 1 sharp, 2 chamfer, 3 round.
+            int top=@curve_topedgetype.getAt(pointid);
+            int bottom=@curve_bottomedgetype.getAt(pointid);
+            float tr=top==0 ? edge_rad : @curve_topedgerad.getAt(pointid);
+            float br=bottom==0 ? edge_rad : @curve_bottomedgerad.getAt(pointid);
+            top=top==0 ? edge_type : top-1;
+            bottom=bottom==0 ? edge_type : bottom-1;
+            primitive=curveExtrude(profile,p.z,@curve_extrudeamount.getAt(pointid),
+                @curve_extrudedir.getAt(pointid),@curve_extrudemode.getAt(pointid),top,tr,bottom,br);
+        }
+        else continue;
 
         // Exact for uniform scale; conservative for nonuniform scale.
         primitive *= distanceScale;
@@ -7049,14 +7214,313 @@ Content-Type: text/plain
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget.init"
+Content-Type: text/plain
+
+type = subnet
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget.def"
+Content-Type: text/plain
+
+comment ""
+position 8.55553 -3.60461
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	opencl10 2 1 "input1"
+}
+inputs
+{
+0 	opencl10 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author Dominik@DESKTOP-QIR795T
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+cablerenamebylabel	[ 0	locks=0 ]	(	"off"	)
+inputs	[ 0	locks=0 ]	(	1	)
+outputs	[ 0	locks=0 ]	(	1	)
+inputlabel1	[ 0	locks=0 ]	(	surface	)
+inputtype1	[ 0	locks=0 ]	(	"fvdb"	)
+outputlabel1	[ 0	locks=0 ]	(	surface	)
+outputtype1	[ 0	locks=0 ]	(	"fvdb"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{"type":"string","value":"___EXTERNAL___"}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget/inputs.init"
+Content-Type: text/plain
+
+type = input
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget/inputs.def"
+Content-Type: text/plain
+
+comment ""
+position 0 5.55112e-17
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render on highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create -1
+  modify -1
+  author Dominik@DESKTOP-QIR795T
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget/inputs.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget/inputs.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{"type":"string","value":"___EXTERNAL___"}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget/outputs.init"
+Content-Type: text/plain
+
+type = output
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget/outputs.def"
+Content-Type: text/plain
+
+comment ""
+position 12.9328 5.55112e-17
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	Preview 1 1 "input1"
+}
+inputs
+{
+0 	Preview 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author Dominik@DESKTOP-QIR795T
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget/outputs.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget/outputs.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{"type":"string","value":"___EXTERNAL___"}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget/Preview.init"
+Content-Type: text/plain
+
+type = null
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget/Preview.def"
+Content-Type: text/plain
+
+comment ""
+position 10.4328 5.55112e-17
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display on render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on export on
+outputsNamed3
+{
+1 "surface"
+}
+inputsNamed3
+{
+0 	inputs 0 1 "input1"
+}
+inputs
+{
+0 	inputs 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author Dominik@DESKTOP-QIR795T
+  access 0777
+}
+color UT_Color RGB 0.6 0.7 0.77
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget/Preview.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+outputs	[ 0	locks=0 ]	(	1	)
+outputname1	[ 0	locks=0 ]	(	surface	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget/Preview.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{"type":"string","value":"___EXTERNAL___"}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/OUT.init"
+Content-Type: text/plain
+
+type = null
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/OUT.def"
+Content-Type: text/plain
+
+comment ""
+position 10.8634 -3.60461
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display on render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on export on
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	divetarget 1 1 "input1"
+}
+inputs
+{
+0 	divetarget 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author Dominik@DESKTOP-QIR795T
+  access 0777
+}
+color UT_Color RGB 0.6 0.7 0.77
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/OUT.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+outputs	[ 0	locks=0 ]	(	1	)
+outputname1	[ 0	locks=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/OUT.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{"type":"string","value":"___EXTERNAL___"}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget.order"
+Content-Type: text/plain
+
+3
+inputs
+Preview
+outputs
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/PROCESSOR/divetarget.net"
+Content-Type: text/plain
+
+1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/PROCESSOR.order"
 Content-Type: text/plain
 
-4
+6
 import_BaseVDB
 geotovdb1
 import_PTS
 opencl10
+divetarget
+OUT
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/PROCESSOR.net"

@@ -10,3 +10,5 @@ IconSVG	IconSVG
 PythonModule	PythonModule
 OnInputChanged	OnInputChanged
 ExtraFileOptions	ExtraFileOptions
+DiveTarget	DiveTarget
+EditableNodes	EditableNodes

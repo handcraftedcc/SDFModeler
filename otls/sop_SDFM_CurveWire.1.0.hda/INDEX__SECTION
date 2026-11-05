@@ -1,0 +1,14 @@
+Operator:     dom::SDFM_CurveWire::1.0
+Label:        SDFM Curve Wire
+Path:         oplib:/dom::Sop/SDFM_CurveWire::1.0?dom::Sop/SDFM_CurveWire::1.0
+Icon:         opdef:/dom::Sop/SDFM_CurveWire::1.0?IconSVG
+Table:        Sop
+License:      
+Extra:        guide=GUIDE inputcolors='1 "RGB 0.72549 0.72549 0.72549" ' outputcolors='1 "RGB 0.72549 0.72549 0.72549" ' 
+User:         
+Inputs:       1 to 1
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Thu Oct 29 23:53:59 2026
+

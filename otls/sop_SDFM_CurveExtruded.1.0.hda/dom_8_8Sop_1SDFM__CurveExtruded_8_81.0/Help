@@ -1,0 +1,3 @@
+= SDFM Curve Extruded =
+
+Profiles are prepared in local XY. Extrusion is along local Z and placement comes from the packed primitive transform. Bidirectional Extrude Amount is total thickness.

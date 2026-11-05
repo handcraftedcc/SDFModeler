@@ -1,0 +1,1 @@
+3D polygon and cubic Bezier wires. Radius is multiplied by vertex or point pscale. All descriptor attributes are on packed primitives. Built-in transform handle. Runtime snippets are embedded.
