@@ -54,8 +54,14 @@ The assembler's **Combine Settings** and **Shell** belong to this enclosing grou
 
 The parent's working region and resolution determine the final evaluation. A larger preview workspace on the child doesn't enlarge the parent's workspace, and increasing the child's mesh resolution doesn't increase the parent's resolution.
 
-## What affects performance?
+## Dive inside: process the SDF in COPs
 
-Voxel count is usually the first thing to check. The evaluator visits the shape description for each active voxel, so many source prims and heavily sampled curves also add work. Prim Array creates extra descriptors; an SDF array reuses the source through a domain transformation, with the cell-boundary behavior described in [Modifiers](modifiers.md).
+You can also dive inside the GPU Assembler to keep working on the evaluated SDF. Its dive target takes you into an editable COP subnet, after the shape evaluation and before the result returns to SOPs.
 
-Mesh extraction adds a separate step after GPU evaluation. Use VDB output if your next nodes work on volumes. Source curve preparation and final meshing still happen outside the SDF kernel; GPU evaluation doesn't make the whole network free of CPU work or data transfers.
+This is useful for things like displacing the surface with noises, smoothing, sharpening, or adding other volume effects. You can build the main form with the SDFM prims and modifiers, then add surface detail or adjust the combined volume here.
+
+Inside, the default connection is **inputs → Preview → outputs**. Insert your COP nodes between **inputs** and **Preview**, keeping the processed `surface` volume connected through to **outputs**. The assembler then uses that processed volume for its first output, whether you choose VDB or Mesh. Use COP operations that support SDF volumes for the effect you're building.
+
+Allow some extra space in the working region if displacement expands the surface. These operations work at the assembler's voxel resolution, so small noise details need enough resolution to show up.
+
+The second **Assembly Output** carries the source shape setup, so these COP edits aren't included when you feed that output into another assembler. Add the processing inside the final assembler if you want it on the final combined model.

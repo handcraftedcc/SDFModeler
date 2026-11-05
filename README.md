@@ -5,7 +5,7 @@
 
 Start with the [user documentation](docs/README.md) and [overall workflow](docs/workflow.md). There are guides for primitives, modifiers, groups, the GPU Assembler, and older tools, along with a bit of project history.
 
-The [original documentation and tutorials](https://www.notion.so/dominiklange/SDF-Modeler-d965edcc82b64262ab4e5aed102daa12?pvs=4) are still available, though older examples may use the VEX workflow. Developer notes live in [docs/agent](docs/agent/README.md).
+The [original documentation and tutorials](https://www.notion.so/dominiklange/SDF-Modeler-d965edcc82b64262ab4e5aed102daa12?pvs=4) are still available, though older examples may use the VEX workflow.
 
 ## Installation
 1. Download and unpack zip file into folder of your choice.
